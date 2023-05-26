@@ -7,5 +7,7 @@
 	</head>
     <body <?php body_class(); ?>>
 	<header>
-		Header
+		<?php get_template_part( 'template-parts/top-banner' ); ?>
+		<?php get_template_part( 'template-parts/contact-banner' ); ?>
+		<?php get_template_part( 'template-parts/main-navigation' ); ?>
 	</header>
