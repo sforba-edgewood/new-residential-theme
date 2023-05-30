@@ -12,6 +12,7 @@ function blankslate_comment_count( $count ) {
 }
 
 function edgewood_enqueue() {
+    wp_enqueue_style('theme-css', get_stylesheet_directory_uri() . "/dist/app.css", null, 'all');
     wp_enqueue_script( 'jquery' );
 }
 
