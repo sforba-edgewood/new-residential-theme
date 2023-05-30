@@ -1,5 +1,7 @@
-$test: #000;
+@import './vendor/reset.scss';
 
-body {
+@import './layout/top-banner.scss';
+@import './layout/contact-banner.scss';
+@import './layout/header.scss';
 
-}
+@import './components/hero-main.scss';

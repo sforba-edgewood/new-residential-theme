@@ -1,3 +1,18 @@
-<div>
-    Contact Information Banner
+<?php
+    $directions_link = get_field( "directions_link", 'option' );
+    $contact_phone = get_field( "contact_phone_number", 'option' );
+    // echo print_r($directions_link);
+?>
+<div class="contact-banner">
+    <p>
+       
+        <a href=" <? echo $directions_link['url']; ?>">
+            <? echo $directions_link['title']; ?>
+        </a>
+    </p>
+    <p>
+        <a href="tel:<? echo $contact_phone; ?>">
+            <? echo $contact_phone; ?>
+        </a>
+    </p>
 </div>
