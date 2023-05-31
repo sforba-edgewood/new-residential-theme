@@ -1,7 +1,6 @@
 <?php
     $directions_link = get_field( "directions_link", 'option' );
     $contact_phone = get_field( "contact_phone_number", 'option' );
-    // echo print_r($directions_link);
 ?>
 <div class="contact-banner">
     <p>
