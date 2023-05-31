@@ -1,0 +1,14 @@
+.main-navigation {
+    display: flex;
+    justify-content: center;
+
+    .main-navigation-list {
+        display: flex;
+        flex-direction: row;
+    }
+    .main-navigation-link {
+        color: white;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+}

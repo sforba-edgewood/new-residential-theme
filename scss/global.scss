@@ -1,8 +1,13 @@
-@import './vendor/reset.scss';
-@import './vendor/slick.scss';
+@import './vendor/reset';
+@import './vendor/slick';
 
-@import './layout/top-banner.scss';
-@import './layout/contact-banner.scss';
-@import './layout/header.scss';
+@import './layout/top-banner';
+@import './layout/contact-banner';
+@import './layout/header';
+@import './layout/main-navigation';
 
-@import './components/hero-main.scss';
+
+@import './components/hero-main';
+@import './components/breadcrumbs.scss';
+@import './components/feature-cards';
+@import './components/image-text';

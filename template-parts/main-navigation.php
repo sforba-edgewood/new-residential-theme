@@ -2,13 +2,13 @@
     $main_navigation =  wp_get_nav_menu_items('main-menu');
 ?>
 <nav class="main-navigation" role="navigation">
-    <ul>
+    <ul class="main-navigation-list">
         <?php 
             foreach ( $main_navigation as $navItem ) {  
 
                 echo '
-                <li>
-                    <a href="'.$navItem->url.'" class="'.$navItem->classes[0].'" title="'.$navItem->title.'">'.$navItem->title.'</a>
+                <li class="main-navigation-list-item p-4">
+                    <a href="'.$navItem->url.'" class="'.$navItem->classes[0].' font-bold main-navigation-link " title="'.$navItem->title.'">'.$navItem->title.'</a>
                 </li>';
             
             }

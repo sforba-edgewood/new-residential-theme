@@ -1,0 +1,59 @@
+$color_1: #fff;
+$color_2: rgba(255, 255, 255, 0.7019607843137254);
+$color_3: #333;
+$font-family_1: Oswald,sans-serif;
+
+.bc-bg {
+	background: #f99d26;
+	.breadcrumb-wraps {
+		padding-right: .625rem;
+		padding-left: .625rem;
+		max-width: 75rem;
+		margin: 0 auto;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		.breadcrumb-wrapper {
+			width: calc(100% - 1.875rem);
+			margin-right: .9375rem;
+			margin-left: .9375rem;
+			color: $color_1;
+			font-family: $font-family_1;
+			text-transform: uppercase;
+			letter-spacing: .12rem;
+			#breadcrumbs {
+				padding-top: .8rem;
+				margin-bottom: 0;
+				padding-bottom: .8rem;
+				a {
+					color: $color_2;
+					&:hover {
+						color: $color_3;
+					}
+				}
+			}
+			.breadcrumb_last {
+				font-weight: 900;
+			}
+		}
+	}
+}
+@media print {
+	.bc-bg {
+		.breadcrumb-wraps {
+			padding-right: .9375rem;
+			padding-left: .9375rem;
+		}
+	}
+}
+@media screen and (min-width: 64em) {
+	.bc-bg {
+		.breadcrumb-wraps {
+			padding-right: .9375rem;
+			padding-left: .9375rem;
+		}
+	}
+}
