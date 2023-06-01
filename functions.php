@@ -45,17 +45,17 @@ function vendor_enqueue() {
 
 function edgewood_enqueue() {
     wp_enqueue_style('theme-css', get_stylesheet_directory_uri() . "/dist/app.css", null, 'all');
-    wp_enqueue_script('theme-js', get_stylesheet_directory_uri() . "/js/theme-js.js", array('gsap-js'), false, true);
+    wp_enqueue_script('theme-js', get_stylesheet_directory_uri() . "/js/app.js", array('gsap-js'), time(), true);
 }
+
 function fonts_enqueue() {
     wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap', false ); 
 }
 
-add_action( 'wp_enqueue_scripts', 'fonts_enqueue' );
 add_action( 'wp_enqueue_scripts', 'init_enqueue' );
+add_action( 'wp_enqueue_scripts', 'fonts_enqueue' );
 add_action( 'wp_enqueue_scripts', 'vendor_enqueue' );
 add_action( 'wp_enqueue_scripts', 'edgewood_enqueue' );
-
 
 
 if( function_exists('acf_add_options_page') ) {
