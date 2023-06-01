@@ -1,0 +1,22 @@
+.footer {
+    background: #023C5B;
+    color: white;
+
+    &__title {
+        position: relative;
+
+        &::after {
+            content: " ";
+            display: block;
+            width: 100%;
+            max-width: 6rem;
+            height: 0.1rem;
+            background: #fc9c01;
+            position: absolute;
+        }
+    }
+
+    &__bottom  {
+        background-color: #02334d;
+    }
+}

@@ -7,8 +7,8 @@
             foreach ( $main_navigation as $navItem ) {  
 
                 echo '
-                <li class="main-navigation-list-item p-4">
-                    <a href="'.$navItem->url.'" class="'.$navItem->classes[0].' font-bold main-navigation-link " title="'.$navItem->title.'">'.$navItem->title.'</a>
+                <li class="main-navigation-list-item">
+                    <a href="'.$navItem->url.'" class="'.$navItem->classes[0].' p-4 font-bold main-navigation-link " title="'.$navItem->title.'"><span>'.$navItem->title.'</span></a>
                 </li>';
             
             }

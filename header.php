@@ -11,13 +11,13 @@
 		<?php get_template_part( 'template-parts/contact-banner' ); ?>
 		<header class="flex flex-row justify-center items-center header" id="header">
 			<div class="container flex flex-row justify-center items-center py-5  header__container">
-				<div class="main-logo">
+				<div class="main-logo mr-4">
 					<a href="/" class="main-logo__link">
 						<img src="<?php echo get_field( "logo", 'option' );?>" class="main-logo__image"/>
 					</a>
 				</div>
 				<?php get_template_part( 'template-parts/main-navigation' ); ?>
-				<div class="veterans">
+				<div class="ml-4 veterans">
 					<?php 
 						$veterans = get_field( "veterans_initiative", 'option' );
 						$vet_link = $veterans['link'];

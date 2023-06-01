@@ -23,9 +23,9 @@
                                 <? echo $copy; ?>
                             </h3>
                         </div>
-                        <!-- <div class="feature-card__copy">
+                        <div class="flex justify-center items-center text-center feature-card__copy">
                             <? echo $features; ?>
-                        </div>                         -->
+                        </div>                        
                     </div>
                 </div>
             </li>

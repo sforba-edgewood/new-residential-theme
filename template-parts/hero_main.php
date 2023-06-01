@@ -19,8 +19,8 @@
                     <h2>
                         <? echo $secondary_title; ?>
                     </h2>
-                    <div>
-                        <a href="<? echo $cta["url"]; ?>" target="<? echo $cta["target"]; ?>">
+                    <div class="mt-2">
+                        <a class="py-2 px-9 block mx-auto w-fit font-bold  rounded-3xl text-lg hero-main__cta" href="<? echo $cta["url"]; ?>" target="<? echo $cta["target"]; ?>">
                             <? echo $cta['title']; ?>
                         </a>
                     </div>

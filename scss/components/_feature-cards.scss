@@ -1,6 +1,7 @@
 .feature-cards {
     .feature-card {
         position: relative;
+        overflow: hidden;
 
         &__content {
             color: white;
@@ -16,9 +17,14 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            transform: translateY(-0%);
+            opacity: 1;
+            transition: all ease-in-out 500ms;
 
             h2 {
                 position: relative;
+                transform: translateX(0);
+                transition: all ease-in-out 500ms;
 
                 &:after {
                     content: "";
@@ -26,7 +32,44 @@
                     width: 20%;
                     margin: 0 auto;
                     height: 2px;
-                    background-color: red;
+                    background-color: #fb9d00;
+                }
+            }
+
+            h3 {
+                transform: translateX(0);
+                transition: all ease-in-out 500ms;
+            }
+        }
+
+        &__copy {
+            transition: all ease-in-out 500ms;
+            opacity: 0;
+            transform: translateY(100%);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover {
+            .feature-card {
+                &__title {
+                    opacity: 0;
+
+                    h2 {
+                        transform: translateX(-100%);
+                    }
+
+                    h3 {
+                        transform: translateX(100%);
+                    }
+                }
+                &__copy {
+                    transition: all ease-in-out 500ms;
+                    opacity: 1;
+                    transform: translateY(0%);
                 }
             }
         }

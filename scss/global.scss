@@ -1,13 +1,17 @@
+@import './base';
 @import './vendor/reset';
 @import './vendor/slick';
 
+@import './widgets/button';
 @import './layout/top-banner';
 @import './layout/contact-banner';
 @import './layout/header';
+@import './layout/footer';
 @import './layout/main-navigation';
 
 
 @import './components/hero-main';
 @import './components/breadcrumbs.scss';
 @import './components/feature-cards';
+@import './components/featured-images';
 @import './components/image-text';
