@@ -4,7 +4,7 @@
 
 
 <div class="feature-cards py-7">
-    <ul class="grid grid-cols-4 gap-x-4">
+    <ul class="grid grid-cols-1 md:grid-cols-4 gap-x-4">
         <? foreach($feature_cards as $card) {
             $image = $card['image'];
             $title = $card['title'];
@@ -13,7 +13,7 @@
         ?> 
             <li class="feature-cards__item">
                 <div class="feature-card">
-                    <img object-fit="cover" class="feature-card__image" src="<? echo $image; ?>" target="" alt="<? echo $title; ?>"/>
+                    <img class="w-full feature-card__image" src="<? echo $image; ?>" target="" alt="<? echo $title; ?>"/>
                     <div class="feature-card__content">
                         <div class="feature-card__title">
                             <h2 class="text-2xl text-center pb-2">

@@ -26,6 +26,6 @@ $(document).ready(function() {
         'resizeDuration': 200,
         'wrapAround': true,
         disableScrolling: true,
-        maxWidth: 1400,
+        maxWidth: 1200,
     });
 })

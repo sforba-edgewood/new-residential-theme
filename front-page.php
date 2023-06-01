@@ -1,8 +1,8 @@
 <?php
+      get_header();
       $id = get_the_ID();
       $components_field = get_field( "page_components_list", $id);
-      $components = (isset($components_field) == true)  ? $components_field['page_components'] : null;
-      get_header();
+      $components = (isset($components_field) == true && $components_field['page_components'] != false )  ? $components_field['page_components'] : null;
 ?>
 <main class="main">
       <?    
@@ -18,3 +18,5 @@
             }
       ?>
 </main>
+
+<? get_footer(); ?>

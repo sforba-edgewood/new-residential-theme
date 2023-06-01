@@ -10,7 +10,7 @@
 		<?php get_template_part( 'template-parts/top-banner' ); ?>
 		<?php get_template_part( 'template-parts/contact-banner' ); ?>
 		<header class="flex flex-row justify-center items-center header" id="header">
-			<div class="container flex flex-row justify-center items-center py-5  header__container">
+			<div class="container flex flex-row justify-around md:justify-center items-center py-5  header__container">
 				<div class="main-logo mr-4">
 					<a href="/" class="main-logo__link">
 						<img src="<?php echo get_field( "logo", 'option' );?>" class="main-logo__image"/>

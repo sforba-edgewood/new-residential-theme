@@ -45,7 +45,7 @@ function vendor_enqueue() {
 
 function edgewood_enqueue() {
     wp_enqueue_style('theme-css', get_stylesheet_directory_uri() . "/dist/app.css", null, 'all');
-    wp_enqueue_script('theme-js', get_stylesheet_directory_uri() . "/js/app.js", array('gsap-js'), time(), true);
+    wp_enqueue_script('app-js', get_stylesheet_directory_uri() . "/js/app.js", array('gsap-js'), time(), true);
 }
 
 function fonts_enqueue() {

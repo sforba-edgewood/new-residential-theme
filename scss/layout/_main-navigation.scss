@@ -1,7 +1,10 @@
 .main-navigation {
-    display: flex;
     justify-content: center;
+    display: none;
 
+    @include lg-up {
+        display: flex;
+    }
     .main-navigation-list {
         display: flex;
         flex-direction: row;

@@ -7,7 +7,7 @@
 
 ?>
 <footer class="footer">
-    <div class="footer__container footer__top pt-14 pb-10 container mx-auto grid grid-cols-3">
+    <div class="footer__container footer__top pt-14 pb-10 container mx-auto grid grid-cols-1 md:grid-cols-3">
         <div class="footer-col flex flex-col">
             <div class="">
                 <img class="max-w-xs mx-auto w-full" src="<? echo $logo; ?>" alt="New Residential Theme"/>

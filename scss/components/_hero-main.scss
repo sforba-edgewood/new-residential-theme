@@ -1,15 +1,27 @@
 .hero-main {
     width: 100%;
+    height: 80vh;
+
+    @include med-up {
+        height: calc(100vh - 90px);
+    }
 
     .slick-slider {
 
         .slick-slide {
             position: relative;
-            height: 800px;
+            height: 100%;
 
             img {
                 width: 100%;
                 height: 100%;
+                object-fit: cover;
+                max-height: 80vh;
+
+                @include med-up {
+                    height: auto;
+                    max-height: calc(100vh - 90px);
+                }
             }
 
             .hero-slide-content {
@@ -21,18 +33,8 @@
                 margin: 0 auto;
                 top: 50%;
                 font-family: Oswald;
-
-                h1 {
-                    font-size: 39px;
-                    line-height: 35px;
-                    color: white;
-                }
-
-                h2 {
-                    font-size: 22px;
-                    line-height: 23px;
-                    color: white;
-                }
+                color: white;
+                transform: translateY(-50%);
             }
         }
     }
