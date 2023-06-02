@@ -7,17 +7,55 @@
         width: fit-content;
 
         &__image {
-            max-width: 13rem;
+            max-width: 7rem;
+
+            @include med-up {
+                max-width: 13rem;
+            }
         }
     }
 
     .veterans {
         width: fit-content;
+        display: none;
+
+        @include med-up {
+            display: block;
+        }
+
         &__link {
             max-width: 4.5rem;
         }
+
         &__image {
             max-width: 4.5rem;
+        }
+    }
+
+    .hamburger-menu {
+        display: block;
+        width: 2.25rem;
+        position: relative;
+        height: 18px;
+
+        span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            background-color: white;
+            height: 4px;
+            top: calc(50%);
+
+            &:first-of-type {
+                top: 0;
+            }
+
+            &:last-of-type {
+                top: 100%;
+            }
+        }
+        @include med-up {
+            display: none;
         }
     }
 }

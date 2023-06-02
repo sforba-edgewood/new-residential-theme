@@ -1,0 +1,12 @@
+.mobile-nav {
+    display: block;
+    height: 100%;
+    background-color: #f99d26;
+    width: 80vw;
+    position: absolute;
+    z-index: 5;
+
+    @include med-up {
+        display: none;
+    }
+}

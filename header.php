@@ -7,6 +7,7 @@
 		
 	</head>
     <body <?php body_class(); ?>>
+		<?php get_template_part( 'template-parts/mobile-navigation' ); ?>
 		<?php get_template_part( 'template-parts/top-banner' ); ?>
 		<?php get_template_part( 'template-parts/contact-banner' ); ?>
 		<header class="flex flex-row justify-center items-center header" id="header">
@@ -27,5 +28,10 @@
 						<img class="veterans__image" src="<? echo $vet_image;?>" />
 					</a>
 				</div>
+				<button class="hamburger-menu" id="hamburgerMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 			</div>
 		</header>

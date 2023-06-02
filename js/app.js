@@ -21,7 +21,10 @@ $(document).ready(function() {
         gsap.fromTo(".hero-slide-content h2", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.3);
         gsap.fromTo(".hero-slide-cta-wrap", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.5);
     });
-        
+    
+    $('body').on('click', '#hamburgerMenu', function() {
+        gsap.from(".mobile-nav", { x: 1000, duration: 1}, { x: 0, duration: 1}).delay(0.1);
+    })
     //FEATURE CARDS JS
 
     lightbox.option({
