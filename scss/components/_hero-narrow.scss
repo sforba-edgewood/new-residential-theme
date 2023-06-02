@@ -1,0 +1,37 @@
+.hero-narrow {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    font-family: Oswald,sans-serif;
+
+    @include med-up {
+        height: 25rem;
+    }
+
+    &__title {
+        position: absolute;
+        color: white;
+        top: 55%;
+        transform: translate(-50%, 50%);
+        left: 40%;
+        width: fit-content;
+        letter-spacing: 1.92px;
+
+        &::after {
+            content: " ";
+            display: block;
+            width: 50%;
+            position: absolute;
+            height: 0.2rem;
+            background: #f99d26;
+            left: -15%;
+            bottom: -10px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

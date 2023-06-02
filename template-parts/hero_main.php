@@ -11,20 +11,23 @@
             $cta = $slide['hero_cta'];
         ?>
             <div class="slick-slide hero-slide">
-                <img  src="<? echo $image; ?>" target="" alt="<? echo $primary_title; ?>"/>
-                <div  class="hero-slide-content">
-                    <h1 class="text-5xl md:text-8xl">
-                        <? echo $primary_title; ?>
-                    </h1>
-                    <h2 class="text-4xl md:text-6xl">
-                        <? echo $secondary_title; ?>
-                    </h2>
-                    <div class="mt-2">
-                        <a class="py-2 px-9 block mx-auto w-fit font-bold  rounded-3xl text-lg hero-main__cta" href="<? echo $cta["url"]; ?>" target="<? echo $cta["target"]; ?>">
-                            <? echo $cta['title']; ?>
-                        </a>
+                <div class="hero-slide-wrap">
+                    <img  src="<? echo $image; ?>" target="" alt="<? echo $primary_title; ?>"/>
+                    <div  class="hero-slide-content">
+                        <h1 class="text-5xl md:text-8xl">
+                            <? echo $primary_title; ?>
+                        </h1>
+                        <h2 class="text-4xl md:text-6xl">
+                            <? echo $secondary_title; ?>
+                        </h2>
+                        <div class="mt-2 hero-slide-cta-wrap">
+                            <a class="py-2 px-9 block mx-auto w-fit font-bold  rounded-3xl text-lg hero-main__cta" href="<? echo $cta["url"]; ?>" target="<? echo $cta["target"]; ?>">
+                                <? echo $cta['title']; ?>
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
         <? } ?>
     </div>

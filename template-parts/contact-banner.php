@@ -6,14 +6,14 @@
     <p>
        
         <a href=" <? echo $directions_link['url']; ?>">
+            <i class="fa-solid fa-location-dot"></i>
             <? echo $directions_link['title']; ?>
-            <i class="fa-icon-map-marker directions-ic"></i>
         </a>
     </p>
     <p>
         <a href="tel:<? echo $contact_phone; ?>">
+        <i class="fa-solid fa-phone"></i>
             <? echo $contact_phone; ?>
-            <i class="fa-icon-mobile-phone phone-ic"></i>
         </a>
     </p>
 </div>

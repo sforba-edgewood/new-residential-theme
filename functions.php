@@ -22,7 +22,7 @@ function init_enqueue() {
 
 function vendor_enqueue() {
     //Font Awesome
-    wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.0.13/css/all.css' );
+    wp_enqueue_script( 'load-fa', 'https://kit.fontawesome.com/c2421f5429.js' );
 
 
     // The core GSAP library

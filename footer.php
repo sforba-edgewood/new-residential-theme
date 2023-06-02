@@ -14,36 +14,51 @@
             </div>
         </div>
         <div class="footer-col flex flex-col">
-            <h3 class="text-xl font-bold mb-4 footer__title">Leasing Office</h3>
-            <div class="mb-3">
-                <h4 class="font-bold">Address:</h4>
-                <? echo $leasing_copy; ?>
-            </div>
-            <div class="mb-3">
-                <h4 class="font-bold">Phone:</h4>
-                <? echo $phone; ?>
-            </div>
-            <div>
-                <h4 class="font-bold">Email</h4>
-                <? echo $phone; ?>
+            <div class="w-fit mx-auto">
+                <h3 class="text-xl font-bold mb-4 footer__title">Leasing Office</h3>
+                <div class="mb-3">
+                    <h4 class="font-bold">Address:</h4>
+                    <? echo $leasing_copy; ?>
+                </div>
+                <div class="mb-3">
+                    <h4 class="font-bold">Phone:</h4>
+                    <? echo $phone; ?>
+                </div>
+                <div>
+                    <h4 class="font-bold">Email</h4>
+                    <? echo $phone; ?>
+                </div>
             </div>
         </div>
         <div class="footer-col flex flex-col">
-            <div>
-                <h3 class="text-xl font-bold mb-4 footer__title">Connect With Us: </h3>
-                <ul>
-                    <li>
-                        <a href="">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4 footer__title">Sitemap </h3>
+            <div class="w-fit mx-auto">
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 footer__title">Connect With Us: </h3>
+                    <ul class="flex flex-row">
+                        <li>
+                            <a href="" class="text-4xl">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="text-4xl mx-3">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="text-4xl">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div>
-                    <a target="_blank" href="/sitemap">
-                        Sitemap
-                    </a>
+                    <h3 class="text-xl font-bold mb-4 footer__title">Sitemap </h3>
+                    <div>
+                        <a target="_blank" href="/sitemap">
+                            Sitemap
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
