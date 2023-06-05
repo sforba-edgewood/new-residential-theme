@@ -26,5 +26,46 @@
     }
 ?>
 
-<div class="mobile-nav">
+<div class="mobile-nav" id="mobileNav">
+<ul class="mobile-nav__list pl-4 pt-8">
+        <?php foreach ( $navbar_items as $navItem ) { 
+            $url = $navItem->url;
+            $classes = $navItem->classes[0];
+            $title =  $navItem->title;
+            $subnav_items = $navItem->child_items;
+          
+        ?>
+            <li class="mobile-nav__item mb-2">
+                <a href="<? echo $url; ?>" class="font-bold text-3xl mobile-nav__link <? echo $classes; ?>">
+                    <span><? echo $title; ?></span>
+                </a>
+                <? if((gettype($subnav_items) == 'array') && count($subnav_items) > 0) {?>
+                <button class="ml-2 mobile-subnav-button">
+                        <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <? } ?>
+                <?php if((gettype($subnav_items) == 'array') && count($subnav_items) > 0){?>
+                    <div class="mobile-nav__sub">
+                        <ul class="pl-2">
+                            <?php foreach ( $subnav_items  as $subNavItem ) { 
+
+                                $url = $subNavItem->url;
+                                $classes = $subNavItem->classes[0];
+                                $title =  $subNavItem->title;
+
+                            ?>
+                                <li>
+                                    <a href="<? echo $url; ?>" class="font-bold mobile-nav__sub-link <? echo $classes; ?>">
+                                        <span><? echo $title; ?></span>
+
+                                    </a>
+                                </li>
+                            <? }?>
+                        </ul>
+                    </div>
+                <? }?>
+            </li>
+            
+        <? } ?>
+    </ul>
 </div>
