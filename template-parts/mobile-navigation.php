@@ -1,6 +1,10 @@
 <?php
 
+    $veterans = get_field( "veterans_initiative", 'option' );
+    $vet_link = $veterans['link'];
+    $vet_image = $veterans['image'];
     $navbar_items = wp_get_nav_menu_items('main-menu');
+    
     $child_items = [];
 
     // pull all child menu items into separate object
@@ -68,4 +72,9 @@
             
         <? } ?>
     </ul>
+    <div class="mobile-nav__veterans mt-8 pl-4">
+        <a href="<? echo $vet_link; ?>" class="veterans__link">
+            <img class="veterans__image" src="<? echo $vet_image;?>" />
+        </a>
+    </div>
 </div>

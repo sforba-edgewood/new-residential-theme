@@ -1,0 +1,21 @@
+.contact-page__form {
+ .cpage-field {
+    margin: 0 0 1rem;
+
+    label {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: Oswald,sans-serif;
+        font-size: 1.2rem;
+
+        input, textarea, select {
+            width: 100%;
+            border: 1px solid grey;
+            padding-left: 0.4rem;
+        }
+    }
+ }   
+}

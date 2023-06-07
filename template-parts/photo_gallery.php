@@ -4,9 +4,9 @@
     $copy = $args['copy'];
     $images = $args['images'];
 ?>
-<div class="pt-7 gallery">
+<div class="py-7 gallery">
     <div>
-        <h2 class="gallery__title">
+        <h2 class="text-6xl font-bold gallery__title">
             <? echo $title; ?>
         </h2>
         <div class="gallery__copy">
@@ -23,7 +23,9 @@
                             
                         ?>
                             <li>
-                                <img src="<?php echo $url; ?>"  alt="<?php echo $alt; ?>"/>
+                                <a href="<?php echo $url; ?>" data-lightbox="gallery">
+                                    <img src="<?php echo $url; ?>"  alt="<?php echo $alt; ?>"/>
+                                </a>
                             </li>
                     <? } ?>
                     </ul>
