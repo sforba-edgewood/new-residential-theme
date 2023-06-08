@@ -7,17 +7,26 @@
 
         @include med-up {
             display: flex;
+            flex-direction: column;
+        }
+        @include lg-up {
             flex-direction: row;
-
         }
 
         &.right {
-            flex-direction: row-reverse;
+            @include med-up {
+                flex-direction: column;
+            }
+
+            @include lg-up {
+                flex-direction: row-reverse;
+            }
         }
     }
     &__col {
         width: 100%;
-        @include med-up { 
+
+        @include lg-up { 
             width: 50%;
         }
 
@@ -34,7 +43,8 @@
                 left: 0;
                 z-index: 0;
                 background-color: rgba(0, 0, 0, 0.3);
-                @include med-up { 
+
+                @include lg-up { 
                     display: none;
                 }
             }
@@ -43,7 +53,7 @@
                 object-fit: cover;
                 height: 70vh;
 
-                @include med-up { 
+                @include lg-up { 
                     object-fit: none;
                     height: auto;
                 }
@@ -59,7 +69,7 @@
             color: white;
             top: 5%;
 
-            @include med-up {
+            @include lg-up {
                 top: 0;
             }
 

@@ -1,0 +1,225 @@
+.ep-places {
+
+
+    .section-heading {
+        width: calc(100% - 1.875rem);
+        margin-right: .9375rem;
+        margin-left: .9375rem;
+        text-align: center;
+        color: white; 
+    
+        .section-tag-thin {
+            font-weight: 100;
+            font-size: 4rem;
+            span {
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+        }
+    }
+    @media screen and (max-width:63.9375em) {
+        .section-heading {
+            .section-tag-thin {
+                font-size: 2rem;
+                line-height: 4rem;
+                span {
+                    margin-top: -2rem;
+                    display: block;
+                }
+            }
+        }
+    }
+    
+    body.page-template-flexible .map-bg-wrap {
+        padding-left: 7rem
+      }
+      
+      @media screen and (max-width:63.9375em) {
+        body.page-template-flexible .map-bg-wrap {
+          padding-left: 0
+        }
+      }
+      
+      body.page-template-flexible .map-bg-wrap .map-wrap {
+        padding-right: .625rem;
+        padding-left: .625rem;
+        max-width: 79rem;
+        margin: 0 auto
+      }
+      
+      @media print, screen and (min-width:64em) {
+        body.page-template-flexible .map-bg-wrap .map-wrap {
+          padding-right: .9375rem;
+          padding-left: .9375rem
+        }
+      }
+      
+      body.page-template-flexible .map-bg-wrap .map-wrap .this-content {
+        max-width: 22rem
+      }
+      
+      @media screen and (max-width:64em) {
+        body.page-template-flexible .map-bg-wrap .map-wrap .this-content {
+          max-width: 100%
+        }
+      }
+      .map-bg-wrap {
+          background: #162f35
+        }
+        
+        .map-wrap {
+          padding-right: .625rem;
+          padding-left: .625rem;
+          max-width: 75rem;
+          margin: 0 auto;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-flow: row wrap;
+          -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+          padding-top: 2rem;
+          padding-bottom: 7rem
+        }
+        
+        @media print, screen and (min-width:64em) {
+          .map-wrap {
+            padding-right: .9375rem;
+            padding-left: .9375rem
+          }
+        }
+        
+        .map-wrap .map-box-left {
+          width: calc(42.33333% - 1.875rem);
+          margin-right: .9375rem;
+          margin-left: .9375rem;
+          margin-right: -.625rem;
+          margin-left: -.625rem;
+          background: #2c6b7a;
+          border-left: 1px solid #ccc;
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc
+        }
+        
+        @media print, screen and (min-width:64em) {
+          .map-wrap .map-box-left {
+            margin-right: -.9375rem;
+            margin-left: -.9375rem
+          }
+        }
+        
+        @media screen and (max-width:63.9375em) {
+          .map-wrap .map-box-left {
+            width: calc(100% - 1.25rem);
+            margin-right: .625rem;
+            margin-left: .625rem;
+            border-right: 1px solid #ccc
+          }
+        }
+        
+        .map-wrap .map-box-left .map-controller {
+          margin: 0;
+          list-style: none
+        }
+        
+        .map-wrap .map-box-left .map-controller li button {
+          background: #2c6b7a;
+          text-align: left;
+          color: #fff;
+          padding: 1rem 0 1rem 1rem;
+          border-bottom: 1px solid #ccc;
+          display: block;
+          width: 100%;
+          text-transform: uppercase;
+          font-weight: 500;
+          letter-spacing: 0.06rem;  
+          font-family: "Oswald",sans-serif;
+          cursor: pointer;
+          -webkit-transition: .2s all linear;
+          -moz-transition: .2s all linear;
+          -o-transition: .2s all linear
+        }
+        
+        .map-wrap .map-box-left .map-controller li button:hover {
+          background: #429eb3;
+          -webkit-transition: .2s all linear;
+          -moz-transition: .2s all linear;
+          -o-transition: .2s all linear
+        }
+        
+        .map-wrap .map-box-left .map-controller li button:hover i {
+          margin-left: 1rem;
+          -webkit-transition: .2s all linear;
+          -moz-transition: .2s all linear;
+          -o-transition: .2s all linear
+        }
+        
+        .map-wrap .map-box-left .map-controller li button i {
+          font-size: 1.4rem;
+          margin-right: 1rem;
+          top: .1rem;
+          position: relative;
+          -webkit-transition: .2s all linear;
+          -moz-transition: .2s all linear;
+          -o-transition: .2s all linear
+        }
+        
+        .map-wrap .map-box-left .map-controller .this-content {
+          display: none;
+          max-height: 18rem;
+          overflow: scroll;
+          max-width: 20.5rem
+        }
+        
+        @media screen and (max-width:63.9375em) {
+          .map-wrap .map-box-left .map-controller .this-content {
+            max-width: 100%
+          }
+        }
+        
+        .map-wrap .map-box-left .map-controller .this-content p {
+          color: #fff;
+          padding: 1rem 0 1rem 2rem;
+          border-bottom: 1px solid #ccc;
+          margin-bottom: 0
+        }
+        
+        .map-wrap .map-box-left .map-controller .this-content p:hover {
+          text-decoration: underline;
+          cursor: pointer
+        }
+        
+        .map-wrap .map-box-right {
+          width: calc(66.66667% - 1.875rem);
+          margin-right: .9375rem;
+          margin-left: .9375rem;
+          margin-right: -.625rem;
+          margin-left: -.625rem;
+          min-height: 40rem;
+          border-right: 1px solid #ccc;
+          border-top: 2px solid #ccc;
+          border-bottom: 2px solid #ccc
+        }
+        
+        @media print, screen and (min-width:64em) {
+          .map-wrap .map-box-right {
+            margin-right: -.9375rem;
+            margin-left: -.9375rem
+          }
+        }
+        
+        @media screen and (max-width:63.9375em) {
+          .map-wrap .map-box-right {
+            width: calc(100% - 1.25rem);
+            margin-right: .625rem;
+            margin-left: .625rem;
+            min-height: 25rem
+          }
+        }
+        
+        .map-wrap .map-box-right #map {
+          width: 100%;
+          height: 100%
+        }
+            
+}

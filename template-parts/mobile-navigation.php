@@ -1,6 +1,7 @@
 <?php
 
     $veterans = get_field( "veterans_initiative", 'option' );
+    $logo = get_field( "logo", 'option' );
     $vet_link = $veterans['link'];
     $vet_image = $veterans['image'];
     $navbar_items = wp_get_nav_menu_items('main-menu');
@@ -31,7 +32,19 @@
 ?>
 
 <div class="mobile-nav" id="mobileNav">
-<ul class="mobile-nav__list pl-4 pt-8">
+    <div class="flex flex-row">
+        <div class="mobile-nav__log mt-8 pl-4">
+            <a href="<? echo $vet_link; ?>" class="logo__link">
+                <img class="logo" src="<? echo $logo; ?>" />
+            </a>
+        </div>
+        <div class="mobile-nav__veterans mt-8 pl-4">
+            <a href="<? echo $vet_link; ?>" class="veterans__link">
+                <img class="veterans__image" src="<? echo $vet_image;?>" />
+            </a>
+        </div>
+    </div>
+    <ul class="mobile-nav__list pl-4 pt-8">
         <?php foreach ( $navbar_items as $navItem ) { 
             $url = $navItem->url;
             $classes = $navItem->classes[0];
@@ -49,7 +62,7 @@
                 </button>
                 <? } ?>
                 <?php if((gettype($subnav_items) == 'array') && count($subnav_items) > 0){?>
-                    <div class="mobile-nav__sub">
+                    <div class="mobile-nav__sub mt-2">
                         <ul class="pl-2">
                             <?php foreach ( $subnav_items  as $subNavItem ) { 
 
@@ -58,8 +71,8 @@
                                 $title =  $subNavItem->title;
 
                             ?>
-                                <li>
-                                    <a href="<? echo $url; ?>" class="font-bold mobile-nav__sub-link <? echo $classes; ?>">
+                                <li class="mb-1">
+                                    <a href="<? echo $url; ?>" class=" text-2xl mobile-nav__sub-link <? echo $classes; ?>">
                                         <span><? echo $title; ?></span>
 
                                     </a>
@@ -72,9 +85,4 @@
             
         <? } ?>
     </ul>
-    <div class="mobile-nav__veterans mt-8 pl-4">
-        <a href="<? echo $vet_link; ?>" class="veterans__link">
-            <img class="veterans__image" src="<? echo $vet_image;?>" />
-        </a>
-    </div>
 </div>

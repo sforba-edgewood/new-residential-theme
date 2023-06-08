@@ -36,17 +36,17 @@
                     <h3 class="text-xl font-bold mb-4 footer__title">Connect With Us: </h3>
                     <ul class="flex flex-row">
                         <li>
-                            <a href="" class="text-4xl">
+                            <a href="" class="footer__social text-4xl">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="" class="text-4xl mx-3">
+                            <a href="" class="footer__social text-4xl mx-3">
                                 <i class="fa-brands fa-twitter"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="" class="text-4xl">
+                            <a href="" class="footer__social text-4xl">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>

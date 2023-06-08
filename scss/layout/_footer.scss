@@ -17,6 +17,14 @@
         }
     }
 
+    &__social {
+        opacity: 1;
+        transition: all ease-in-out 250ms;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
     &__bottom  {
         background-color: #02334d;
     }

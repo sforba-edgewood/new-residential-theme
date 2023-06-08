@@ -3,6 +3,10 @@
     height: 80vh;
 
     @include med-up {
+        height: 50vh;
+    }
+
+    @include lg-up {
         height: calc(100vh - 90px);
     }
 
@@ -19,6 +23,10 @@
                 max-height: 80vh;
 
                 @include med-up {
+                    max-height: 50vh;
+                }
+
+                @include lg-up {
                     height: auto;
                     max-height: calc(100vh - 90px);
                 }

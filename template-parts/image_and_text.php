@@ -11,11 +11,11 @@
         <div class="image-text__col image">
             <img src="<? echo $image; ?>" target="" alt="<? echo $primary_title; ?>, <? echo $secondary_title; ?>"/>
         </div>
-        <div  class="image-text__col content">
-            <h1 class="font-thin text-4xl md:text-6xl">
+        <div  class=" md:py-5 lg:py-0  image-text__col content">
+            <h1 class="font-thin text-4xl lg:text-6xl">
                 <? echo $primary_title; ?>
             </h1>
-            <h1 class="font-bold text-4xl md:text-6xl">
+            <h1 class="font-bold text-4xl lg:text-6xl">
                 <? echo $secondary_title; ?>
             </h1>
             <div>
