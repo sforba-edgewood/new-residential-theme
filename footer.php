@@ -4,6 +4,8 @@
     $phone = get_field( "phone", 'option' );
     $edgewood_logo = get_field( "edgewood_logo", 'option' );
     $copyright = get_field( "copyright", 'option' );
+    $appointment_button_text = get_field( "modal_button_text", 'option' );
+    $appointment_shortcode= get_field( "appointment_shortcode", 'option' );
 
 ?>
 <footer class="footer">
@@ -74,7 +76,14 @@
         </div>
     </div>
 </footer>
-
+<div class="appointment-modal">
+    <div>
+        <button class="appointment-modal__button" type="button"><? echo $appointment_button_text; ?></button>
+        <div class="appointment-modal__content">
+        <?php echo do_shortcode($appointment_shortcode); ?>
+        </div>
+    </div>
+</div>
 <?php wp_footer(); ?>
 
 </body>

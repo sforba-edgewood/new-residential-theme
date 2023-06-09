@@ -1,7 +1,7 @@
 .mobile-nav {
     display: block;
     height: 100vh;
-    background-color: #f99d26;
+    background: #033b5b;
     width: 80vw;
     position: absolute;
     z-index: 10;
@@ -17,6 +17,12 @@
         display: none;
     }
     
+    .logo {
+        &__link {
+            display: block;
+            max-width: 11rem;
+        }
+    }
     &__link {
         color: white;
     }
