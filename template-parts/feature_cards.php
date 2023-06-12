@@ -1,10 +1,14 @@
 <?php 
     $feature_cards = $args['feature_card'];
+    $card_count = count($feature_cards);
+    if(gettype($feature_cards) != 'array') {
+        return;
+    }
 ?>
 
 
 <div class="feature-cards py-7">
-    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-y-4 gap-x-4">
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-<? echo $card_count; ?> md:gap-y-4 gap-x-4">
         <? foreach($feature_cards as $card) {
             $image = $card['image'];
             $title = $card['title'];

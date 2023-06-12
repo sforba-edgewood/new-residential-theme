@@ -2,6 +2,9 @@
     $title = $args['title'];
     $cta = $args['cta'];
     $images = $args['images'];
+    if(gettype($images) != 'array') {
+        return;
+    }
 ?>
 <div class="featured-images">
     <div class="container mx-auto featured-images__container py-20">

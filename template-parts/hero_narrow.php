@@ -1,6 +1,9 @@
 <?php 
     $title = $args['title'];
     $image = $args['image'];
+    if(empty($image)) {
+        return;
+    }
 ?>
 
 <div class="hero-narrow">

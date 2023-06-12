@@ -3,7 +3,9 @@
     $title = $args['title'];
     $copy = $args['copy'];
     $images = $args['images'];
-    // print_r(json_encode($images));
+    if(gettype($images) != 'array') {
+        return;
+    }
 ?>
 <div class="py-7 gallery">
     <div>

@@ -1,5 +1,8 @@
 <?php 
     $slides = $args['hero_slides'];
+    if(gettype($slides) != 'array') {
+        return;
+    }
 ?>
 
 <div class="hero-main">
