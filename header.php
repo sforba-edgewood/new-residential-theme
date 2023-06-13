@@ -13,7 +13,7 @@
 		<header class="flex flex-row justify-center items-center header" id="header">
 			<?php get_template_part( 'template-parts/mobile-navigation' ); ?>
 			<div class="container flex flex-row justify-between md:justify-around md:justify-center items-center py-5 px-5 md:px-0 header__container">
-				<div class="main-logo mr-4">
+				<div class="main-logo">
 					<a href="/" class="main-logo__link">
 						<img src="<?php echo get_field( "logo", 'option' );?>" class="main-logo__image"/>
 					</a>

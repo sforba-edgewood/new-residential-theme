@@ -23,7 +23,7 @@
                         <h2 class="text-4xl md:text-6xl">
                             <? echo $secondary_title; ?>
                         </h2>
-                        <div class="mt-2 hero-slide-cta-wrap">
+                        <div class="mt-8 hero-slide-cta-wrap">
                             <a class="py-2 px-9 block mx-auto w-fit font-bold  rounded-3xl text-lg hero-main__cta" href="<? echo $cta["url"]; ?>" target="<? echo $cta["target"]; ?>">
                                 <? echo $cta['title']; ?>
                             </a>

@@ -1,9 +1,9 @@
 <?php 
     $feature_cards = $args['feature_card'];
-    $card_count = count($feature_cards);
     if(gettype($feature_cards) != 'array') {
         return;
     }
+    $card_count = count($feature_cards);
 ?>
 
 
