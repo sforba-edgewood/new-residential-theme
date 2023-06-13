@@ -10,7 +10,7 @@
         font-family: Oswald,sans-serif;
         font-size: 1.2rem;
 
-        input[type="text"], textarea, select {
+        input:not([type="submit"]), textarea, select {
             width: 100%;
             border: 1px solid grey;
             padding-left: 0.4rem;
