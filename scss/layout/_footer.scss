@@ -17,6 +17,16 @@
         }
     }
 
+    &__block {
+        min-width: 40%;
+        margin-bottom: 1rem;
+
+        @include med-up {
+            min-width: none;
+            margin-bottom: 0rem;
+        }
+    }
+
     &__social {
         opacity: 1;
         transition: all ease-in-out 250ms;

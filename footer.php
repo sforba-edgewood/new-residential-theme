@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="footer-col flex flex-col">
-            <div class="w-fit mx-auto">
+            <div class="w-fit mx-auto footer__block">
                 <h3 class="text-xl font-bold mb-4 footer__title">Leasing Office</h3>
                 <div class="mb-3">
                     <? if(empty($leasing_copy) != true){  ?>
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="footer-col flex flex-col">
-            <div class="w-fit mx-auto">
+            <div class="w-fit mx-auto  footer__block">
                 <div class="mb-8">
                     <h3 class="text-xl font-bold mb-4 footer__title">Connect With Us: </h3>
                     <ul class="flex flex-row">
