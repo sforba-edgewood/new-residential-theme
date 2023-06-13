@@ -19,7 +19,7 @@
     <div class="contact-page__wrap">
         <img src="<? echo $background_image;?>"  class="contact-page__bg" />
         <div class="contact-page__content">
-            <main  class="contact-page__container">
+            <main  class="contact-page__main">
                 <div class="contact-page__form">
                     <?php echo do_shortcode($contact_form_shortcode); ?>
                 </div>

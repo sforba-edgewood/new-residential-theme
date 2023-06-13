@@ -8,34 +8,43 @@
         position: absolute;
     }
 
-    &__container {
+    &__content{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        padding: 4rem;
+        padding-top: 100px;
+        flex-direction: column;
+
+        @include lg-up {
+            flex-direction: row;
+        }
+    }
+
+    &__main {
         border: 2px solid white;
         margin-bottom: 10rem;
         background: rgba(2, 51, 77, 0.61);
         border: 2px solid rgba(255,255,255,.3);
-        padding: 2rem 4rem;
-        width: calc(66.66667% - 1.875rem);
-        margin-right: 0.9375rem;
-        margin-left: 0.9375rem;
+        width: 100%;
+
+        @include lg-up {
+            width: 60vw;
+            padding: 2rem 4rem;
+        }
     }
 
-    &__content{
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 4rem;
-        padding-top: 100px;
-    }
 
     &__sidebar {
         color: white;
         position: relative;
         background: rgba(2, 51, 77, 0.61);
-        width: calc(33.33333% - 1.875rem);
         border: 2px solid rgba(255,255,255,.3);
-        margin-right: 0.9375rem;
-        margin-left: 0.9375rem;
+        width: 100%;
+
+        @include lg-up {
+            width: 20vw;
+        }
 
         &-title {
             background: #023C5B;

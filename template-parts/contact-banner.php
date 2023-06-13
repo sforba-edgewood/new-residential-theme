@@ -1,6 +1,6 @@
 <?php
     $directions_link = get_field( "directions_link", 'option' );
-    $contact_phone = get_field( "contact_phone_number", 'option' );
+    $contact_phone = get_field( "phone", 'option' );
     if(empty($contact_phone) && empty($directions_link)) {
         return;
     }
