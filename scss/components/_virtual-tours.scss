@@ -1,0 +1,33 @@
+.virtual-tours {
+    &__title {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        position: relative;
+        font-weight: 600;
+
+        &::after {
+            content: " ";
+            display: block;
+            width: 20%;
+            position: absolute;
+            height: 0.2rem;
+            background: #f99d26;
+            bottom: -10px;
+        }
+    }
+
+    &__tour {
+        max-width: 90%;
+        margin: 0 auto;
+
+        @include med-up {
+            max-width: 100%;
+            margin: 0;
+        }
+
+        iframe {
+            max-width: 100%;
+        }
+    }
+
+}

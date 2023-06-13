@@ -14,7 +14,6 @@
             if(is_null($components) != true) {
                   foreach($components as $component) {
                         $component_name = $component['acf_fc_layout'];
-                        
                         $component_args = $component[$component['acf_fc_layout']];
                         get_template_part( "template-parts/$component_name", null,$component_args);
                   }
