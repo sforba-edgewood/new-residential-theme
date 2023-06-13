@@ -8,15 +8,19 @@
 ?>
 <div class="contact-banner">
     <p>
-        <a href=" <? echo $directions_link['url']; ?>">
-            <i class="fa-solid fa-location-dot"></i>
-            <? echo $directions_link['title']; ?>
-        </a>
+        <? if(empty($directions_link['url']) != true){  ?>
+            <a href=" <? echo $directions_link['url']; ?>">
+                <i class="fa-solid fa-location-dot"></i>
+                <? echo $directions_link['title']; ?>
+            </a>
+        <? } ?>
     </p>
     <p>
-        <a href="tel:<? echo $contact_phone; ?>">
-        <i class="fa-solid fa-phone"></i>
-            <? echo $contact_phone; ?>
-        </a>
+        <? if(empty($contact_phone) != true){  ?>
+            <a href="tel:<? echo $contact_phone; ?>">
+            <i class="fa-solid fa-phone"></i>
+                <? echo $contact_phone; ?>
+            </a>
+        <? } ?>
     </p>
 </div>

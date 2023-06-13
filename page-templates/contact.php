@@ -18,8 +18,8 @@
     
     <div class="contact-page__wrap">
         <img src="<? echo $background_image;?>"  class="contact-page__bg" />
-        <div class="contact-page__content">
-            <main  class="contact-page__main">
+        <div class="contact-page__content container mx-auto">
+            <main  class="contact-page__main mb-5 lg:mb-0">
                 <div class="contact-page__form">
                     <?php echo do_shortcode($contact_form_shortcode); ?>
                 </div>
@@ -68,7 +68,7 @@
                                 $title = $download['file_title'];
                                 $file = $download['pdf_file'];
                             ?>
-                                <li>
+                                <li class="mb-1">
                                     <a href="<? echo $file;?>">
                                         <i class="fa fa-file-pdf-o"></i>
                                         <? echo $title;?>
@@ -82,3 +82,5 @@
         </div>
     </div>
 </div>
+
+<? get_footer(); ?>
