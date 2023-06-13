@@ -1,0 +1,43 @@
+.sb-field {
+    margin: 0 0 1rem;
+
+    label {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: Oswald,sans-serif;
+        font-size: 1.2rem;
+
+        input[type="text"], textarea, select {
+            width: 100%;
+            border: 1px solid grey;
+            padding-left: 0.4rem;
+            color: black !important;
+        }
+    }
+
+    .wpcf7-not-valid-tip {
+        font-size: 12px;
+     }
+
+    
+    .wpcf7-submit {
+        cursor: pointer;
+        color: white;
+        border: 1px solid white;
+        width: auto;
+        background-color: #fc9c01;
+        transition: all ease-in-out 250ms;
+
+        &:hover {
+            color: #fc9c01;
+            background-color: white;
+        }
+    }
+ }  
+
+ .wpcf7-response-output {
+    display: none;
+ }

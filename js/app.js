@@ -2,6 +2,7 @@
 $(document).ready(function() {
     console.log('hello world');
 
+    //Handle Scroll Animations for Header Content
     $(function(){
         let lastScrollTop = 0, delta = 5;
         $(window).scroll(function(){
@@ -65,15 +66,6 @@ $(document).ready(function() {
 
     $('body').on('click', '#hamburgerMenu',animateHamburgerMenu);
 
-    function animateMobileSubNav (e){
-        e.preventDefault();
-        console.log("Test");
-        const button =$(this);
-        const subnav = button.next();
-
-        button.toggleClass('active');
-        subnav.toggleClass('active');
-    }
 
     $('body').on('click', '.mobile-subnav-button', function(e){
         e.preventDefault();
@@ -120,4 +112,22 @@ $(document).ready(function() {
         fade: false,
         asNavFor: '.gallery__main-list',
     });
+
+    function handleAppointmentClick(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const modal = $("#appointmentModal");
+        $('html, body').toggleClass('disable-scroll');
+        modal.toggleClass('active');
+    }
+    //APPOINTMENT MODAL JS
+    $('body').on('click', '#appointmentModalButton',  function(e) {
+        handleAppointmentClick(e)
+    });
+
+    $('body').on('click', '#apppointmentCloseButton', function(e) {
+        handleAppointmentClick(e)
+    });
+    
 })

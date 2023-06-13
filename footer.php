@@ -9,7 +9,7 @@
     $twitter = get_field( "twitter_link", 'option' );
     $instagram = get_field( "instagram_link", 'option' );
     $appointment_button_text = get_field( "modal_button_text", 'option' );
-    $appointment_shortcode= get_field( "appointment_shortcode", 'option' );
+    $appointment_shortcode= get_field( "appointment_form_shortcode", 'option' );
 
 ?>
 <footer class="footer">
@@ -33,13 +33,17 @@
                     <div class="mb-3">
                     <? if(empty($phone) != true){  ?>
                         <h4 class="font-bold">Phone:</h4>
-                        <? echo $phone; ?>
+                        <a href="tel:<? echo $phone; ?>">                        
+                            <? echo $phone; ?>
+                        </a>
                     <? }?>
                 </div>
                 <div>
                     <? if(empty($email) != true){  ?>
                         <h4 class="font-bold">Email</h4>
-                        <? echo $email; ?>
+                        <a href="mailto:<? echo $email; ?>">
+                            <? echo $email; ?>
+                        </a>
                     <? }?>
                 </div>
             </div>
@@ -98,11 +102,21 @@
         </div>
     </div>
 </footer>
-<div class="appointment-modal">
+<? if(empty($appointment_button_text) != true){  ?>
+    <button class="appointment-modal__button" type="button" id="appointmentModalButton">
+        <? echo $appointment_button_text; ?>
+    </button>
+<? }?>
+<div class="appointment-modal" id="appointmentModal">
     <div>
-        <button class="appointment-modal__button" type="button"><? echo $appointment_button_text; ?></button>
         <div class="appointment-modal__content">
-            <?php echo do_shortcode($appointment_shortcode); ?>
+            <span class="appointment-modal__close" id="apppointmentCloseButton">X</span>
+            <h4 class="appointment-modal__title">
+                SCHEDULE AN APPOINTMENT
+            </h4>
+            <div class="appointment-modal__form">  
+                <?php echo do_shortcode($appointment_shortcode); ?>
+            </div>
         </div>
     </div>
 </div>

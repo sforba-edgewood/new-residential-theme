@@ -3,8 +3,11 @@
 @import './vendor/reset';
 @import './vendor/slick';
 
-@import './layout/appointment-modal';
+@import './widgets/forms';
 @import './widgets/button';
+
+@import './layout/appointment-modal';
+
 @import './layout/top-banner';
 @import './layout/contact-banner';
 @import './layout/header';

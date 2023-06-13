@@ -1,5 +1,4 @@
 .contact-page {
-    margin-top: 100px;
     position: relative;
 
     &__bg {
@@ -26,6 +25,7 @@
         flex-direction: row;
         justify-content: space-around;
         padding: 4rem;
+        padding-top: 100px;
     }
 
     &__sidebar {

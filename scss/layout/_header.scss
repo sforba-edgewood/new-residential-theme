@@ -46,6 +46,7 @@
         height: 18px;
 
         &.active {
+            z-index: 11;
             span {
                 top: 50%;
 

@@ -8,7 +8,6 @@
 //COLORS
 
 .disable-scroll {
-    position: fixed; 
-    inline-size: 100%;
-    overflow-y:scroll;
+    height: 100%;
+    overflow-y:hidden;
 }
