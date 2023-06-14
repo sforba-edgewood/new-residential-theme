@@ -1,3 +1,3 @@
-<div class="ep-places">
+<div class="ep-floorplans">
     <?php echo do_shortcode('[rpFloorplans]'); ?>
 </div>

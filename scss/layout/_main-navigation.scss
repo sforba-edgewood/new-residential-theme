@@ -13,7 +13,7 @@
         position: relative;
         &:hover {
             .main-navigation-link {
-                background-color: #fb9d00;
+                background-color: $grullo;
             }
             .subnav {
                 max-height: 20vh;
@@ -41,7 +41,7 @@
     overflow: hidden;
     position: absolute;
     transition: all ease-in-out 250ms;
-    background-color: #fb9d00;
+    background-color: $grullo;
     top: calc(100% - 2px);
     left: 0;
     width: fit-content;

@@ -64,7 +64,7 @@
         }
       }
       .map-bg-wrap {
-          background: #162f35
+          background: $bistre
         }
         
         .map-wrap {
@@ -95,7 +95,7 @@
           margin-left: .9375rem;
           margin-right: -.625rem;
           margin-left: -.625rem;
-          background: #2c6b7a;
+          background: $raw_umber;
           border-left: 1px solid #ccc;
           border-top: 1px solid #ccc;
           border-bottom: 1px solid #ccc
@@ -123,7 +123,7 @@
         }
         
         .map-wrap .map-box-left .map-controller li button {
-          background: #2c6b7a;
+          background: $raw_umber;
           text-align: left;
           color: #fff;
           padding: 1rem 0 1rem 1rem;

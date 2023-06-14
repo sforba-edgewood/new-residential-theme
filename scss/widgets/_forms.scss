@@ -28,11 +28,11 @@
         color: white;
         border: 1px solid white;
         width: auto;
-        background-color: #fc9c01;
+        background-color: $grullo;
         transition: all ease-in-out 250ms;
 
         &:hover {
-            color: #fc9c01;
+            color: $grullo;
             background-color: white;
         }
     }

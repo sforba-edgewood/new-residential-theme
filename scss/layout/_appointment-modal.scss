@@ -46,7 +46,7 @@
     &__content {
         position: absolute;
 
-        background: orange;
+        background: $grullo;
         height: auto;
         width: 95vw;
         left: 50%;
@@ -66,7 +66,7 @@
 
 button.appointment-modal__button {
     position: fixed;
-    background-color: #fb9d00;
+    background-color: $grullo;
     right: 0rem;
     bottom: 0rem;
     color: #FFF;
@@ -91,8 +91,8 @@ button.appointment-modal__button {
         bottom: 3rem;
     }
     &:hover {
-        color: #fb9d00;
+        color: $grullo;
         background-color: white;
-        border: 2px solid #fb9d00;
+        border: 2px solid $grullo;
     }
 }

@@ -25,7 +25,7 @@
 
     &__main {
         border: 2px solid white;
-        background: rgba(2, 51, 77, 0.61);
+        background: rgba(115, 88, 76, 0.7215686274509804);
         border: 2px solid rgba(255,255,255,.3);
         width: 100%;
         padding: 1rem 2rem;
@@ -40,7 +40,7 @@
     &__sidebar {
         color: white;
         position: relative;
-        background: rgba(2, 51, 77, 0.61);
+        background: rgba(115, 88, 76, 0.61);
         border: 2px solid rgba(255,255,255,.3);
         width: 100%;
 
@@ -49,14 +49,14 @@
         }
 
         &-title {
-            background: #023C5B;
+            background: $grullo;
             text-align: center;
             font-size: 2rem;
             margin-bottom: 1.2rem;
         }
 
         &-block {
-            margin-bottom: 3rem;
+            margin-bottom: 1.5rem;
             padding-left: 1.5rem;
         }
         

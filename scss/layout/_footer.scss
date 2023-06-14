@@ -1,5 +1,5 @@
 .footer {
-    background: #023C5B;
+    background: $bay_red;
     color: white;
 
     &__title {
@@ -12,7 +12,7 @@
             max-width: 6rem;
             bottom: -3px;
             height: 2px;
-            background: #fc9c01;
+            background: $grullo;
             position: absolute;
         }
     }
@@ -36,6 +36,10 @@
         }
     }
     &__bottom  {
-        background-color: #02334d;
+        background-color: $pine_tree;
+
+        img {
+            background-color: white;
+        }
     }
 }

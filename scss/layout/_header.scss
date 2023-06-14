@@ -2,12 +2,12 @@
     position: absolute;
     z-index: 3  ;
     width: 100%;
-    background-color: rgba(3, 59, 91, 0);
+    background-color: rgba(120, 87, 75, 0);
     transition: all ease-in-out 250ms;
 
     &.scroll {
         position: fixed;
-        background-color: rgba(3, 59, 91, 1);
+        background-color: rgba(120, 87, 75, 1);
     }
 
     .main-logo {

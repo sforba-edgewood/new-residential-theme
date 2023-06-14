@@ -8,6 +8,7 @@
     $contact_form_shortcode = get_field( "contact_form_shortcode", $id);
     $sidebar_title = get_field( "sidebar_title", $id);
     $location = get_field( "location", $id);
+    $contact_phone = get_field( "contact_phone", $id);
     $office_hours = get_field( "office_hours", $id);
     $download_list = get_field( "download_list", $id);
 
@@ -15,7 +16,6 @@
 ?>
 
 <div class="contact-page">
-    
     <div class="contact-page__wrap">
         <img src="<? echo $background_image;?>"  class="contact-page__bg" />
         <div class="contact-page__content container mx-auto">
@@ -29,14 +29,16 @@
                     <p class="contact-page__sidebar-title"><? echo $sidebar_title; ?></p>
                 </div>
                 <div>
-                    <div class="contact-page__sidebar-block">
-                        <h4 class="contact-page__sidebar-heading">
-                            Location
-                        </h4>
-                        <div>
-                            <? echo $location; ?>
+                    <? if(empty($location) != true){  ?>
+                        <div class="contact-page__sidebar-block">
+                            <h4 class="contact-page__sidebar-heading">
+                                Location
+                            </h4>
+                            <div>
+                                <? echo $location; ?>
+                            </div>
                         </div>
-                    </div>
+                    <? }?>
                 </div>
                 <div>
                     <div class="contact-page__sidebar-block">
@@ -44,39 +46,43 @@
                             Phone
                         </h4>
                         <div>
-                            <? echo $location; ?>
+                            <? echo $contact_phone; ?>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div  class="contact-page__sidebar-block">
-                        <h4 class="contact-page__sidebar-heading">
-                        Office Hours
-                        </h4>
-                        <div>
-                            <? echo $office_hours; ?>
-                        </div>                        
-                    </div>
+                    <? if(empty($office_hours) != true){  ?>
+                        <div class="contact-page__sidebar-block">
+                            <h4 class="contact-page__sidebar-heading">
+                                Office Hours
+                            </h4>
+                            <div>
+                                <? echo $office_hours; ?>
+                            </div>                        
+                        </div>
+                    <? }?>
                 </div>
                 <div>
-                    <div  class="contact-page__sidebar-block">
-                        <h4 class="contact-page__sidebar-heading">
-                            Downloads
-                        </h4>
-                        <ul>
-                            <? foreach($download_list as $download) {
-                                $title = $download['file_title'];
-                                $file = $download['pdf_file'];
-                            ?>
-                                <li class="mb-1">
-                                    <a href="<? echo $file;?>">
-                                        <i class="fa fa-file-pdf-o"></i>
-                                        <? echo $title;?>
-                                    </a>
-                                </li>
-                            <? } ?>
-                        </ul>
-                    </div>
+                    <? if(gettype($download_list) == 'array'){  ?>
+                        <div  class="contact-page__sidebar-block">
+                            <h4 class="contact-page__sidebar-heading">
+                                Downloads
+                            </h4>
+                            <ul>
+                                <? foreach($download_list as $download) {
+                                    $title = $download['file_title'];
+                                    $file = $download['pdf_file'];
+                                ?>
+                                    <li class="mb-1">
+                                        <a href="<? echo $file;?>">
+                                            <i class="fa fa-file-pdf-o"></i>
+                                            <? echo $title;?>
+                                        </a>
+                                    </li>
+                                <? } ?>
+                            </ul>
+                        </div>
+                    <? } ?>
                 </div>
             </aside>
         </div>
