@@ -6,7 +6,9 @@
     }
 ?>
 <div class="body-copy py-7 prose">
-    <div class="container mx-auto body-copy__wrap">
-        <? echo $copy; ?>
+    <div class="container mx-auto body-copy__container">
+        <div class="body-copy__content">
+            <? echo $copy; ?>
+        </div>
     </div>
 </div>

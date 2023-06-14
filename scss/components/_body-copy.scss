@@ -1,171 +1,53 @@
 .body-copy {
     &__wrap {
-        blockquote,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,li,ol,p,pre,td,th,ul {
-            margin: 0;
-            padding: 0
-        }
-        
-        p {
-            margin-bottom: 1rem;
-            font-size: inherit;
-            line-height: 1.6;
-            text-rendering: optimizeLegibility
-        }
-        
-        em,i {
-            font-style: italic;
-            line-height: inherit
-        }
-        
-        b,strong {
-            font-weight: 700;
-            line-height: inherit
-        }
-        
-        small {
-            font-size: 80%;
-            line-height: inherit
-        }
-        
-        .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
-            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            color: inherit;
-            text-rendering: optimizeLegibility
-        }
-        
-        .h1 small,.h2 small,.h3 small,.h4 small,.h5 small,.h6 small,h1 small,h2 small,h3 small,h4 small,h5 small,h6 small {
-            line-height: 0;
-            color: #cacaca
-        }
-        
-        .h1,h1 {
-            font-size: 1.5rem;
-            line-height: 1.4;
-            margin-top: 0;
-            margin-bottom: .5rem
-        }
-        
-        .h2,h2 {
-            font-size: 1.25rem;
-            line-height: 1.4;
-            margin-top: 0;
-            margin-bottom: .5rem
-        }
-        
-        .h3,h3 {
-            font-size: 1.1875rem;
-            line-height: 1.4;
-            margin-top: 0;
-            margin-bottom: .5rem
-        }
-        
-        .h4,h4 {
-            font-size: 1.125rem;
-            line-height: 1.4;
-            margin-top: 0;
-            margin-bottom: .5rem
-        }
-        
-        .h5,h5 {
-            font-size: 1.0625rem;
-            line-height: 1.4;
-            margin-top: 0;
-            margin-bottom: .5rem
-        }
-        
-        .h6,h6 {
-            font-size: 1rem;
-            line-height: 1.4;
-            margin-top: 0;
-            margin-bottom: .5rem
-        }
-        
-        @media print,screen and (min-width: 64em) {
-            .h1,h1 {
-                font-size:3rem
-            }
-        
-            .h2,h2 {
-                font-size: 2.5rem
-            }
-        
-            .h3,h3 {
-                font-size: 1.9375rem
-            }
-        
-            .h4,h4 {
-                font-size: 1.5625rem
-            }
-        
-            .h5,h5 {
-                font-size: 1.25rem
-            }
-        
-            .h6,h6 {
-                font-size: 1rem
+
+        &.sidebar {
+            display: flex;
+            flex-direction: column;
+
+            @include med-up {
+                flex-direction: row;
             }
         }
-        
-        a {
-            line-height: inherit;
-            color: #898c75;
-            font-weight: 900;
-            text-decoration: none;
-            cursor: pointer
+    }
+
+    &__content {
+        max-width: 100%;
+        margin-right: 0%;
+
+        @include body_copy_styles;
+
+        @include med-up {
+            max-width: 65%;
+            margin-right: 2.5%;
         }
-        
-        a:focus,a:hover {
-            color: #6d6f5e
+    }
+
+    &__sidebar {
+        max-width: 100%;
+        margin-left: 0%;
+        background: #73584c;
+        height: fit-content;
+
+        @include med-up {
+            max-width: 30%;
+            margin-left: 2.5%;           
         }
-        
-        a img {
-            border: 0
+
+        &-title {
+            font-family: Oswald,sans-serif;
+            font-weight: 100;
+            text-transform: uppercase;
+            font-size: 2rem;
+            text-align: center;
+            background: #a19383;
+            color: #fff;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
         }
-        
-        hr {
-            clear: both;
-            max-width: 75rem;
-            height: 0;
-            margin: 1.25rem auto;
-            border-top: 0;
-            border-right: 0;
-            border-bottom: 1px solid #cacaca;
-            border-left: 0
-        }
-        
-        dl,ol,ul {
-            margin-bottom: 1rem;
-            list-style-position: outside;
-            line-height: 1.6
-        }
-        
-        li {
-            font-size: inherit
-        }
-        
-        ul {
-            margin-left: 1.25rem;
-            list-style-type: disc
-        }
-        
-        ol {
-            margin-left: 1.25rem
-        }
-        
-        ol ol,ol ul,ul ol,ul ul {
-            margin-left: 1.25rem;
-            margin-bottom: 0
-        }
-        
-        dl {
-            margin-bottom: 1rem
-        }
-        
-        dl dt {
-            margin-bottom: .3rem;
-            font-weight: 700
+
+        &-form {
+            padding: 1rem;
         }
     }
 }
