@@ -58,6 +58,11 @@
                     height: auto;
                 }
             }
+
+            iframe {
+                min-height: 30rem;
+                width: 100%;
+            }
         }
         &.content {
             padding-left: 3rem;
@@ -69,6 +74,14 @@
             color: white;
             top: 5%;
 
+            &.matterport {
+                display: none;
+
+                @include lg-up {
+                    display: flex;
+                }
+    
+            }
             @include lg-up {
                 top: 0;
             }

@@ -9,12 +9,16 @@
 ?>
 <div class="py-7 gallery">
     <div>
-        <h2 class="text-6xl font-bold gallery__title">
-            <? echo $title; ?>
-        </h2>
-        <div class="gallery__copy">
-            <? echo $copy; ?>
-        </div>
+        <? if(empty($title) != true) {  ?>
+            <h2 class="text-6xl font-bold gallery__title">
+                <? echo $title; ?>
+            </h2>
+        <? } ?>
+        <? if(empty($copy) != true) {  ?>
+            <div class="gallery__copy">
+                <? echo $copy; ?>
+            </div>
+        <? } ?>
         <div>
             <div>
                 <div class="gallery__main">
