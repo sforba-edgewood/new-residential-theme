@@ -17,9 +17,13 @@
 
         @include body_copy_styles;
 
-        @include med-up {
-            max-width: 65%;
-            margin-right: 2.5%;
+        &.sidebar {
+            max-width: 100%;
+            margin-right: 0%;
+            @include med-up {
+                max-width: 65%;
+                margin-right: 2.5%;
+            }
         }
     }
 

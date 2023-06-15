@@ -34,8 +34,8 @@ function vendor_enqueue() {
 	wp_register_style('slick-theme-css', get_template_directory_uri() .'/vendor/slick-slider/slick-theme.css');
     wp_enqueue_script('slick-min-js', get_template_directory_uri().'/vendor/slick-slider/slick.min.js');
 
-    wp_register_style('lightbox-min-css', get_template_directory_uri() .'/vendor/lightbox/lightbox.min.css');
-    wp_enqueue_script('lightbox-min-js', get_template_directory_uri().'/vendor/lightbox/lightbox.min.js', array(), '1.0', true);
+    wp_register_style('lightbox-min-css', get_template_directory_uri() .'/vendor/lightbox/css/lightbox.min.css');
+    wp_enqueue_script('lightbox-min-js', get_template_directory_uri().'/vendor/lightbox/js/lightbox.min.js', array(), '1.0', true);
 
     wp_enqueue_style('slick-css');
 	wp_enqueue_style('slick-theme-css');

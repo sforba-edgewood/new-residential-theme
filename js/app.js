@@ -83,6 +83,7 @@ $(document).ready(function() {
         'wrapAround': true,
         disableScrolling: true,
         maxWidth: 1200,
+        maxHeight: 600,
     });
 
 

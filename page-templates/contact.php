@@ -10,6 +10,7 @@
     $location = get_field( "location", $id);
     $contact_phone = get_field( "contact_phone", $id);
     $office_hours = get_field( "office_hours", $id);
+    $concierge_hours = get_field( "concierge_hours", $id);
     $download_list = get_field( "download_list", $id);
 
     get_header(); 
@@ -41,14 +42,16 @@
                     <? }?>
                 </div>
                 <div>
-                    <div class="contact-page__sidebar-block">
-                        <h4 class="contact-page__sidebar-heading">
-                            Phone
-                        </h4>
-                        <div>
-                            <? echo $contact_phone; ?>
+                    <? if(empty($contact_phone) != true){  ?>
+                        <div class="contact-page__sidebar-block">
+                            <h4 class="contact-page__sidebar-heading">
+                                Phone
+                            </h4>
+                            <div>
+                                <? echo $contact_phone; ?>
+                            </div>
                         </div>
-                    </div>
+                    <? }?>
                 </div>
                 <div>
                     <? if(empty($office_hours) != true){  ?>
@@ -62,6 +65,18 @@
                         </div>
                     <? }?>
                 </div>
+                <div>
+                    <? if(empty($concierge_hours) != true){  ?>
+                        <div class="contact-page__sidebar-block">
+                            <h4 class="contact-page__sidebar-heading">
+                                Concierge Hours
+                            </h4>
+                            <div>
+                                <? echo $concierge_hours; ?>
+                            </div>                        
+                        </div>
+                    <? }?>
+                </div>               
                 <div>
                     <? if(gettype($download_list) == 'array'){  ?>
                         <div  class="contact-page__sidebar-block">

@@ -10,7 +10,7 @@
 
 <div class="body-copy py-7 container mx-auto ">
     <div class="body-copy__wrap sidebar">
-        <div class="body-copy__content">
+        <div class="body-copy__content sidebar">
             <? echo $copy; ?>
         </div>
         <aside class="body-copy__sidebar">
