@@ -1,5 +1,5 @@
 <?php 
-    $logo = get_field( "property_logo", 'option' );
+    $logo = get_field( "logo", 'option' );
     $leasing_copy = get_field( "leasing_office_copy", 'option' );
     $phone = get_field( "phone", 'option' );
     $email = get_field( "email", 'option' );
