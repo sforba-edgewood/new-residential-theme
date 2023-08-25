@@ -3,15 +3,15 @@
 }
 
 .main-navigation-link.nav-btn {
-    background-color: $grullo;
-    color: white;
+    background-color: $color_2;
+    color: $color_3;
     border: 1px solid transparent;
     transition: all ease-in-out 250ms;
     margin: 0 1rem;
 
     &:hover {
-        color: $grullo !important;
+        color: $color_2 !important;
         background-color: white !important;
-        border: 1px solid $grullo !important;
+        border: 1px solid $color_2!important;
     }
 }

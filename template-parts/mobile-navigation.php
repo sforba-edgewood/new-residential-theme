@@ -52,7 +52,7 @@
             $subnav_items = $navItem->child_items;
           
         ?>
-            <li class="mobile-nav__item mb-2">
+            <li class="mobile-nav__item mb-4">
                 <a href="<? echo $url; ?>" class="font-bold text-3xl mobile-nav__link <? echo $classes; ?>">
                     <span><? echo $title; ?></span>
                 </a>

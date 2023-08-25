@@ -3,20 +3,25 @@
     z-index: 3;
     height: auto;
     width: 100%;
-    background-color: rgba(120, 87, 75, 0);
+    background-color: rgba(14, 85, 63, 0);
     transition: all ease-in-out 250ms;
 
     &.scroll {
         position: fixed;
-        background-color: rgba(120, 87, 75, 1);
+        background-color: rgba(14, 85, 63, 1);
         height: 7rem;
+        top: 0;
     }
 
     .main-logo {
         width: fit-content;
 
         &__image {
-            max-width: 7rem;
+            max-width: 5rem;
+
+            @include lg-up {
+                max-width: 7rem;
+            }
         }
     }
 

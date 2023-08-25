@@ -5,7 +5,7 @@
         color: white;
         display: flex;
         flex-direction: column;
-        color: #fff;
+        color: $color_3;
         text-transform: uppercase;
         font-family: Oswald,sans-serif;
         font-size: 1.2rem;
@@ -25,15 +25,15 @@
     
     .wpcf7-submit {
         cursor: pointer;
-        color: white;
-        border: 1px solid white;
+        color: $color_3;
+        border: 1px solid $color_3;
         width: auto;
-        background-color: $grullo;
+        background-color: $color_2;
         transition: all ease-in-out 250ms;
 
         &:hover {
-            color: $grullo;
-            background-color: white;
+            color: $color_2;
+            background-color: $color_3;
         }
     }
  }  

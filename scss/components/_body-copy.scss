@@ -30,7 +30,7 @@
     &__sidebar {
         max-width: 100%;
         margin-left: 0%;
-        background: #73584c;
+        background: $color_2;
         height: fit-content;
 
         @include med-up {
@@ -44,7 +44,7 @@
             text-transform: uppercase;
             font-size: 2rem;
             text-align: center;
-            background: #a19383;
+            background: $color_1;
             color: #fff;
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;

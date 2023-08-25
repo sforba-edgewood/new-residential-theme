@@ -50,9 +50,14 @@ $(document).ready(function() {
     gsap.fromTo(".hero-slide-cta-wrap", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.5);
 
     $('.hero-slider').on('beforeChange', function(){
-        gsap.fromTo(".hero-slide-content h1", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.1);
-        gsap.fromTo(".hero-slide-content h2", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.3);
-        gsap.fromTo(".hero-slide-cta-wrap", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.5);
+        // const current_slide = $(slick.$slides.get(currentSlide));
+        gsap.killTweensOf(".slick-current .hero-slide-content h1");
+        gsap.killTweensOf(".slick-current .hero-slide-content h2");
+        gsap.killTweensOf(".slick-current .hero-slide-cta-wrap");
+
+        gsap.fromTo(".hero-slide-content h1", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1, overwrite: true}).delay(0.1);
+        gsap.fromTo(".hero-slide-content h2", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1, overwrite: true}).delay(0.3);
+        gsap.fromTo(".hero-slide-cta-wrap", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1, overwrite: true}).delay(0.5);
     });
     
     function animateHamburgerMenu() {

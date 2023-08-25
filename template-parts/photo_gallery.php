@@ -28,13 +28,15 @@
                             $sizes = $image_data['sizes'];
                             $medium = $sizes['medium'];
                             $lg = $sizes["1536x1536"];
+                            $lg_height = $sizes["1536x1536-height"];
+                            $lg_width = $sizes["1536x1536-width"];
                             $xl = $sizes["2048x2048"];
                             $alt = (isset($image_data['alt']) == true ) ? $image_data['alt'] : "Photo Gallery Image";
                             
                         ?>
                             <li>
                                 <a href="<?php echo $lg; ?>" data-lightbox="gallery">
-                                    <img src="<?php echo $xl; ?>"  alt="<?php echo $alt; ?>"/>
+                                    <img src="<?php echo $xl; ?>"  width="<? echo $lg_width; ?>" height="<? echo $lg_height; ?>" alt="<?php echo $alt; ?>"/>
                                 </a>
                             </li>
                     <? } ?>

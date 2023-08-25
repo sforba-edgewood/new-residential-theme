@@ -32,7 +32,7 @@
                 <div>
                     <? if(empty($location) != true){  ?>
                         <div class="contact-page__sidebar-block">
-                            <h4 class="contact-page__sidebar-heading">
+                            <h4 class="contact-page__sidebar-heading mb-6">
                                 Location
                             </h4>
                             <div>
@@ -44,10 +44,10 @@
                 <div>
                     <? if(empty($contact_phone) != true){  ?>
                         <div class="contact-page__sidebar-block">
-                            <h4 class="contact-page__sidebar-heading">
+                            <h4 class="contact-page__sidebar-heading mb-6">
                                 Phone
                             </h4>
-                            <div>
+                            <div class="font-bold">
                                 <? echo $contact_phone; ?>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                 <div>
                     <? if(empty($office_hours) != true){  ?>
                         <div class="contact-page__sidebar-block">
-                            <h4 class="contact-page__sidebar-heading">
+                            <h4 class="contact-page__sidebar-heading mb-6">
                                 Office Hours
                             </h4>
                             <div>
@@ -68,7 +68,7 @@
                 <div>
                     <? if(empty($concierge_hours) != true){  ?>
                         <div class="contact-page__sidebar-block">
-                            <h4 class="contact-page__sidebar-heading">
+                            <h4 class="contact-page__sidebar-heading mb-6">
                                 Concierge Hours
                             </h4>
                             <div>
@@ -80,7 +80,7 @@
                 <div>
                     <? if(gettype($download_list) == 'array'){  ?>
                         <div  class="contact-page__sidebar-block">
-                            <h4 class="contact-page__sidebar-heading">
+                            <h4 class="contact-page__sidebar-heading mb-6">
                                 Downloads
                             </h4>
                             <ul>
@@ -88,8 +88,8 @@
                                     $title = $download['file_title'];
                                     $file = $download['pdf_file'];
                                 ?>
-                                    <li class="mb-1">
-                                        <a href="<? echo $file;?>">
+                                    <li class="mb-4">
+                                        <a class="contact-page__sidebar-download" href="<? echo $file;?>">
                                             <i class="fa fa-file-pdf-o"></i>
                                             <? echo $title;?>
                                         </a>

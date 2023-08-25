@@ -13,11 +13,19 @@
         </h2>
         <ul  class="featured-images__list grid grid-cols-1 md:grid-cols-3 gap-3">
             <? foreach($images as $image) { 
-                $img = $image['image'];
+                $image_data = $image['image'];
+                $sizes = $image_data['sizes'];
+                // var_dump($sizes);
+                $medium = $sizes['medium'];
+                $lg = $sizes["large"];
+                $lg_height = $sizes["large-height"];
+                $lg_width = $sizes["large-width"];
+                $xl = $sizes["2048x2048"];
+                $alt = (isset($image_data['alt']) == true ) ? $image_data['alt'] : "Photo Gallery Image";
             ?>
                 <li data-lightbox="gallery">
-                    <a href="<? echo $img; ?>"  data-lightbox="gallery">
-                        <img class="w-full h-full featured-images__image" src="<? echo $img; ?>" target="" alt=""/>
+                    <a href="<? echo $lg; ?>"  data-lightbox="gallery">
+                        <img class="w-full h-full featured-images__image" width="<? echo $lg_width; ?>" height="<? echo $lg_height; ?>" src="<? echo $lg; ?>" alt="<? echo $alt; ?>"/>
                     </a>
                 </li>
             <? } ?>

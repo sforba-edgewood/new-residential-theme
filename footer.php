@@ -17,7 +17,7 @@
         <div class="footer-col flex flex-col">
             <div class="">
                 <? if(empty($logo) != true){  ?>
-                    <img class="max-w-xs mx-auto w-full" src="<? echo $logo; ?>" alt="New Residential Theme"/>
+                    <img class="mx-auto w-full footer__logo" src="<? echo $logo; ?>" alt="New Residential Theme"/>
                 <? }?>
             </div>
         </div>
@@ -55,21 +55,21 @@
                     <ul class="flex flex-row">
                         <? if(empty($facebook) != true){  ?>
                             <li>
-                                <a href="<? echo $facebook;?>" class="footer__social text-4xl">
+                                <a href="<? echo $facebook;?>" class="footer__social text-4xl" target="_blank">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                             </li>
                         <? }?>
                         <? if(empty($twitter) != true){  ?>
                             <li>
-                                <a href="<? echo $twitter;?>" class="footer__social text-4xl mx-3">
+                                <a href="<? echo $twitter;?>" class="footer__social text-4xl mx-3" target="_blank">
                                     <i class="fa-brands fa-twitter"></i>
                                 </a>
                             </li>
                         <? }?>
                         <? if(empty($instagram) != true){  ?>
                         <li>
-                            <a href="<? echo $instagram;?>" class="footer__social text-4xl">
+                            <a href="<? echo $instagram;?>" class="footer__social text-4xl" target="_blank">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>

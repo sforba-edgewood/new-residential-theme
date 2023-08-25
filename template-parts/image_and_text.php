@@ -26,7 +26,7 @@
                 <? echo $secondary_title; ?>
             </h1>
             <div>
-                <p class="text-base">
+                <p class="text-base image-text__copy">
                     <? echo $copy; ?>
                 </p>
             </div>
