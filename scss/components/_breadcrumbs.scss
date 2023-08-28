@@ -26,14 +26,17 @@ $font-family_1: Oswald,sans-serif;
 				padding-top: .8rem;
 				margin-bottom: 0;
 				padding-bottom: .8rem;
+				color: $color_2;
+
 				a {
 					color: $color_2;
 					&:hover {
-						color: $color_3;
+						color: $color_2;
 					}
 				}
 			}
 			.breadcrumb_last {
+				color: $color_2;
 				font-weight: 900;
 			}
 		}

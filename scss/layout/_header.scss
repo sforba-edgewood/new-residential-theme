@@ -6,6 +6,10 @@
     background-color: rgba(14, 85, 63, 0);
     transition: all ease-in-out 250ms;
 
+    &.sem-landing-header {
+        background-color: rgba(14, 85, 63, 1);
+    }
+
     &.scroll {
         position: fixed;
         background-color: rgba(14, 85, 63, 1);

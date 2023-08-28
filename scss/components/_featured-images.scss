@@ -7,4 +7,9 @@
             filter: brightness(90%);
         }
     }
+
+    &__cta {
+        background-color: $color_2;
+        color: $color_3;
+    }
 }

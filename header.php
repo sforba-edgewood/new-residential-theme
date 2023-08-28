@@ -4,13 +4,16 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<?php wp_head(); ?>
+		<title>
+			<?php single_post_title(); ?>
+		</title>
 		
 	</head>
     <body <?php body_class(); ?>>
 
 		<?php get_template_part( 'template-parts/top-banner' ); ?>
 		<?php get_template_part( 'template-parts/contact-banner' ); ?>
-		<header class="flex flex-row justify-center items-center header" id="header">
+		<header class="flex flex-row justify-center items-center header <?php echo (basename(get_page_template()) == 'sem_landing.php') ? 'sem-landing-header' : ''; ?>" id="header"> 
 			<?php get_template_part( 'template-parts/mobile-navigation' ); ?>
 			<div class="container flex flex-row justify-between md:justify-around md:justify-center items-center py-5 px-5 md:px-0 header__container">
 				<div class="main-logo">

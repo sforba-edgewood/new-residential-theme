@@ -10,6 +10,8 @@ $(document).ready(function() {
             const top_banner = $(".top-banner");
             const contact_banner = $(".contact-banner");
             const header = $("#header");
+            const sem = $('.sem');
+
             if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
                 if (nowScrollTop > lastScrollTop){
                     // ACTION ON SCROLLING DOWN 
@@ -18,6 +20,7 @@ $(document).ready(function() {
                         top_banner.addClass("scroll-hide");
                         contact_banner.addClass("scroll-hide");
                         header.addClass("scroll");
+                        sem?.addClass('scroll');
                     }
                 } else {
                     // ACTION ON SCROLLING UP 
@@ -26,6 +29,7 @@ $(document).ready(function() {
                         top_banner.removeClass("scroll-hide");
                         contact_banner.removeClass("scroll-hide");
                         header.removeClass("scroll");
+                        sem?.removeClass('scroll');
                     }
 
                }
@@ -35,6 +39,16 @@ $(document).ready(function() {
     });
 
     //HERO MAIN JS
+    $('.sem__hero-slider').slick({
+        // dots: true,
+        infinite: true,
+        arrows: false,
+        draggable: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
+
     $('.hero-slider').slick({
         // dots: true,
         infinite: true,

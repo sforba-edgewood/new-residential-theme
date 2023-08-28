@@ -1,7 +1,7 @@
 .main-navigation {
     justify-content: center;
     display: none;
-
+    
     @include lg-up {
         display: flex;
     }
@@ -14,6 +14,7 @@
         &:hover {
             .main-navigation-link {
                 background-color: $color_2;
+                
             }
             .subnav {
                 max-height: 20vh;
@@ -27,6 +28,7 @@
         white-space: nowrap;
         transition: all ease-in-out 250ms;
         display: block;
+        font-weight: 400;
 
         span {
             position: relative;
