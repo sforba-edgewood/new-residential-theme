@@ -94,4 +94,17 @@
             }
         }
     }
+
+    &__cta {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem 1rem;
+        font-size: 1.2rem;
+        max-width: 20rem;
+        background: #F4DBB2;
+        color: #505050;
+        text-transform: uppercase;
+        font-family: Oswald,sans-serif
+    }
 }

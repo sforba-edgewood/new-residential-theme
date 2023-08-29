@@ -1,13 +1,14 @@
-.cta {
-    
-}
-
 .main-navigation-link.nav-btn {
     background-color: $color_2;
     color: $color_3 !important;
     border: 1px solid transparent;
     transition: all ease-in-out 250ms;
     margin: 0 1rem;
+
+    &:after {
+        display: none !important;
+    }
+
     &:hover {
         color: $color_3 !important;
         background-color: white !important;

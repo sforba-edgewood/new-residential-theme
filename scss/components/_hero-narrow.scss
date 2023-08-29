@@ -11,11 +11,15 @@
     &__title {
         position: absolute;
         color: white;
-        top: 55%;
-        transform: translate(-50%, 50%);
-        left: 40%;
+        top: 40%;
+        left: 10%;
         width: fit-content;
         letter-spacing: 1.92px;
+
+        @include small-up {
+            transform: translate(-50%, 50%);
+            top: 55%;
+        }
 
         &::after {
             content: " ";
@@ -24,8 +28,12 @@
             position: absolute;
             height: 0.2rem;
             background: $color_2;
-            left: -5%;
+            left: 0%;
             bottom: -15px;
+
+            @include small-up {
+                left: -5%;
+            }
         }
     }
 

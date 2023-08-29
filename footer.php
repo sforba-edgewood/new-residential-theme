@@ -103,7 +103,6 @@
     </div>
 </footer>
 <? if(empty($appointment_button_text) != true && (basename(get_page_template()) != 'sem_landing.php')){  ?>
-    <?php var_dump(basename(get_page_template() != 'sem_landing.php'))?>
     <button class="appointment-modal__button" type="button" id="appointmentModalButton">
         <? echo $appointment_button_text; ?>
     </button>

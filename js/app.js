@@ -58,20 +58,15 @@ $(document).ready(function() {
         fade: true,
         cssEase: 'linear'
     });
-
-    gsap.fromTo(".hero-slide-content h1", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.1);
-    gsap.fromTo(".hero-slide-content h2", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.3);
-    gsap.fromTo(".hero-slide-cta-wrap", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.5);
+    gsap.defaults({ overwrite: true });
+    let h1_tween = gsap.fromTo(".hero-slide-content h1", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.1);
+    let h2_tween =  gsap.fromTo(".hero-slide-content h2", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.3);
+    let content_tween = gsap.fromTo(".hero-slide-cta-wrap", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.5);
 
     $('.hero-slider').on('beforeChange', function(){
-        // const current_slide = $(slick.$slides.get(currentSlide));
-        gsap.killTweensOf(".slick-current .hero-slide-content h1");
-        gsap.killTweensOf(".slick-current .hero-slide-content h2");
-        gsap.killTweensOf(".slick-current .hero-slide-cta-wrap");
-
-        gsap.fromTo(".hero-slide-content h1", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1, overwrite: true}).delay(0.1);
-        gsap.fromTo(".hero-slide-content h2", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1, overwrite: true}).delay(0.3);
-        gsap.fromTo(".hero-slide-cta-wrap", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1, overwrite: true}).delay(0.5);
+        h1_tween.play(0);
+        h2_tween.play(0);
+        content_tween.play(0); 
     });
     
     function animateHamburgerMenu() {
@@ -107,8 +102,14 @@ $(document).ready(function() {
 
 
     //Photo Gallery JS
-    const gallery_count  = $('.gallery__thumb-list li').length - 1;
-    
+    let gallery_count = 5;
+    if($('.gallery__thumb-list li').length > 5) {
+        gallery_count = 5;
+    } else if($('.gallery__thumb-list li').length < 2) {
+        gallery_count = 1;
+    } else {
+        gallery_count  = $('.gallery__thumb-list li').length - 1;
+    }
     console.log(gallery_count);
     $('.gallery__main-list').slick({
         dots: false,

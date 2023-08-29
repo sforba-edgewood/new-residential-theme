@@ -26,6 +26,7 @@
                         <div class="mt-8 hero-slide-cta-wrap">
                             <a class="py-2 px-9 block mx-auto w-fit font-bold  rounded-3xl font-normal text-lg uppercase hero-main__cta" href="<? echo $cta["url"]; ?>" target="<? echo $cta["target"]; ?>">
                                 <? echo $cta['title']; ?>
+                                <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>

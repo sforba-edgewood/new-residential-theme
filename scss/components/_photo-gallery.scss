@@ -50,11 +50,18 @@
     &__thumb {
         max-height: 300px;
 
-        &-slide {
-            max-height: 250px;
-            width: 100%;
-            height: auto;
-            object-fit: cover;
+        &-list {
+            height: fit-content;
+        }
+
+        li {
+            height: fit-content;
+            img {
+                max-height: 250px;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
         }
     }
 }

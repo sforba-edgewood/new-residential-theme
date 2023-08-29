@@ -5,6 +5,8 @@
     $image = $args['image'];
     $orientation = $args['image_orientation'];
     $matterport_link = $args['matterport_link'];
+    $cta = $args['cta'];
+    $cta_check = (gettype($cta) == 'array');
 ?>
 
 <div class="image-text">
@@ -30,10 +32,13 @@
                     <? echo $copy; ?>
                 </p>
             </div>
-            <div>
-                <a href="">
-                </a>
-            </div>
+            <?php if($cta_check){?>
+                <div class="pt-5">
+                    <a href="<? echo $cta['url']; ?>" class="image-text__cta">
+                        <? echo $cta['title']; ?>
+                    </a>
+                </div>
+            <? }?>
         </div>
     </div>
 </div>
