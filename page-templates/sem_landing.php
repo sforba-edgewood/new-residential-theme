@@ -70,7 +70,7 @@
                 $left_list_items = $left_list['left_feature_list'];
                 $right_list_items = $right_list['right_feature_list'];
             ?>
-            <div class="sem__features-wrap">
+            <div class="sem__features-wrap container mx-auto">
                 <div class="sem__features-block">
                     <div  class="sem__features-title">
                         <? echo $left_list_title; ?>
@@ -81,6 +81,9 @@
                         ?>
 
                             <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                    <path d="M32,2C15.431,2,2,15.432,2,32c0,16.568,13.432,30,30,30c16.568,0,30-13.432,30-30C62,15.432,48.568,2,32,2z M25.025,50  l-0.02-0.02L24.988,50L11,35.6l7.029-7.164l6.977,7.184l21-21.619L53,21.199L25.025,50z" fill="#F4DBB2"/>
+                                </svg>
                                 <?php echo $left_item_text; ?>
                             </li>
                         <? } ?>    
@@ -95,6 +98,9 @@
                                 $right_item_text = $right_item['right_feature_list_item'];
                         ?>
                             <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                    <path d="M32,2C15.431,2,2,15.432,2,32c0,16.568,13.432,30,30,30c16.568,0,30-13.432,30-30C62,15.432,48.568,2,32,2z M25.025,50  l-0.02-0.02L24.988,50L11,35.6l7.029-7.164l6.977,7.184l21-21.619L53,21.199L25.025,50z" fill="#F4DBB2"/>
+                                </svg>
                                 <?php echo $right_item_text; ?>
                             </li>
                         <? } ?>                           
@@ -118,7 +124,7 @@
                 <div class="sem__neighborhood-copy">
                     <? echo $sem_neighborhood_copy; ?>
                         </div>
-                <a class="sem__neighborhood-cta" href="<? echo $sem_neighborhood_cta["url"]; ?>" target="_blank">
+                <a class="sem-cta sem__neighborhood-cta" href="<? echo $sem_neighborhood_cta["url"]; ?>" target="_blank">
                     <? echo $sem_neighborhood_cta["title"]; ?>
                 </a>
             </div>
@@ -139,7 +145,7 @@
                 <div class="sem__floorplan-copy">
                     <? echo $floorplan_copy; ?>
                 </div>
-                <a class="sem__floorplan-cta" href="<? echo $floorplan_cta["url"]; ?>" target="_blank">
+                <a class="sem-cta sem__floorplan-cta" href="<? echo $floorplan_cta["url"]; ?>" target="_blank">
                     <? echo $floorplan_cta["title"]; ?>
                 </a>
             </div>

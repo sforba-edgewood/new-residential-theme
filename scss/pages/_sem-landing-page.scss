@@ -1,5 +1,9 @@
 .sem {
-    margin-top:  calc(112px + 2.5rem);
+    margin-top:  calc(80px + 2.5rem);
+
+    @include lg-up {
+        margin-top:  calc(112px + 2.5rem);
+    }
 
     &.scroll {
         margin-top: 0;
@@ -11,10 +15,7 @@
         height: fit-content;
 
         &-tag {
-            position: absolute;
-            left: 12px;
             background-color: #005941;
-            top: 12px;
             border: 1px solid rgba(204,204,204,.68);
             z-index: 1;
             padding: 0.7rem 1rem;
@@ -22,21 +23,32 @@
             font-size: 1.5rem;
             color: white;
             font-weight: 700;
-            max-width: 225px;
             text-align: center;
+            position: static;
+            max-width: 100%;
+
+            @include lg-up {
+                position: absolute;
+                top: 12px;
+                left: 12px;
+                max-width: 225px;
+            }
         }
 
         &-form {
-            position: absolute;
-            right: 12px;
-            top: 12px;
             // top: calc(110px + 2rem);
             background: #005941;
             text-align: center;
             color: #fff;
             border: 0.01rem solid rgba(255,255,255,.89);
             padding: 1rem;
-            
+    
+            @include lg-up {
+                position: absolute;
+                top: 12px;
+                left: 12px;
+                max-width: 225px;
+            }
         }
 
         &-wrap {
@@ -61,6 +73,11 @@
     }
 
     &__content {
+
+        &-wrap {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
         &-title {
             font-size: 3rem;
             font-family: Oswald,sans-serif;
@@ -110,13 +127,28 @@
                 text-transform: capitalize;
                 font-weight: 700;
                 font-size: 1.2rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 4px;
+                }
             }
         }
 
         &-wrap {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @include lg-up {
+                flex-direction: row;
+                justify-content: space-between;
+            }
         }
     }
 
@@ -141,9 +173,13 @@
         &-copy {
             margin: 0 auto;
             text-align: justify;
+            width: fit-content;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
         &-cta {
-
+            display: block;
+            margin: 0 auto;
         }
     }
 
@@ -171,7 +207,12 @@
         }
         &-copy {
             text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
+    
         &-cta {
             display: block;
             margin: 0 auto;
