@@ -15,9 +15,9 @@
         left: 10%;
         width: fit-content;
         letter-spacing: 1.92px;
+        transform: translateY(-50%);
 
         @include small-up {
-            transform: translate(-50%, 50%);
             top: 55%;
         }
 

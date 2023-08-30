@@ -36,6 +36,7 @@
                 <div class="pt-5">
                     <a href="<? echo $cta['url']; ?>" class="image-text__cta">
                         <? echo $cta['title']; ?>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             <? }?>

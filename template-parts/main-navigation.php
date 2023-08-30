@@ -37,7 +37,7 @@
             $subnav_check = (gettype($subnav_items) == 'array') && (count($subnav_items) > 0);
         ?>
             <li class="main-navigation-list-item <? echo $subnav_check ? 'sub-nav-present' : ''; ?>">
-                <a target="_blank" href="<? echo $url; ?>" class="p-4 font-bold main-navigation-link <? echo $classes; ?>">
+                <a href="<? echo $url; ?>" class="p-4 font-bold main-navigation-link <? echo $classes; ?>">
                     <span><? echo $title; ?></span>
                     <?php if($subnav_check){?>
                         <i class="fa-solid fa-caret-down"></i>
@@ -54,7 +54,7 @@
 
                             ?>
                                 <li class="subnav__list-item">
-                                    <a target="_blank" href="<? echo $url; ?>" class="p-3 font-bold subnav__link <? echo $classes; ?>">
+                                    <a href="<? echo $url; ?>" class="p-3 font-bold subnav__link <? echo $classes; ?>">
                                         <span><? echo $title; ?></span>
                                         <i class="fa-solid fa-caret-right"></i>
                                     </a>

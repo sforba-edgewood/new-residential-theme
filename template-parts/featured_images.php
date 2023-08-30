@@ -33,6 +33,7 @@
         <div class="mt-8">
             <a class="py-2 px-9 block mx-auto w-fit font-normal text-lg uppercase featured-images__cta" href="<? echo $cta["url"]; ?>" target="<? echo $cta["target"]; ?>">
                 <? echo $cta['title']; ?>
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
     </div>

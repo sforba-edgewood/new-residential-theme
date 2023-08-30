@@ -11,5 +11,22 @@
     &__cta {
         background-color: $color_2;
         color: $color_3;
+    
+        &:hover {
+            i {
+                opacity: 1;
+                width: auto;
+                visibility:visible;
+                transform: translateX(0px);
+            }
+        }
+        i {
+            opacity: 0;
+            width: 0;
+            overflow: hidden;
+            visibility: hidden;
+            transition: all ease-in-out 250ms;
+            transform: translateX(-5px);
+        }
     }
 }

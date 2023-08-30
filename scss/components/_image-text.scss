@@ -105,6 +105,23 @@
         background: #F4DBB2;
         color: #505050;
         text-transform: uppercase;
-        font-family: Oswald,sans-serif
+        font-family: Oswald,sans-serif;
+
+        &:hover {
+            i {
+                opacity: 1;
+                width: auto;
+                visibility:visible;
+                transform: translateX(0px);
+            }
+        }
+        i {
+            opacity: 0;
+            width: 0;
+            overflow: hidden;
+            visibility: hidden;
+            transition: all ease-in-out 250ms;
+            transform: translateX(-5px);
+        }
     }
 }
