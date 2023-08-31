@@ -15,7 +15,6 @@
             <? foreach($images as $image) { 
                 $image_data = $image['image'];
                 $sizes = $image_data['sizes'];
-                // var_dump($sizes);
                 $medium = $sizes['medium'];
                 $lg = $sizes["large"];
                 $lg_height = $sizes["large-height"];

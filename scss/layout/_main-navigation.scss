@@ -45,7 +45,8 @@
         display: block;
         font-weight: 400;
         position: relative;
-    
+        font-size: 18px;
+
         &:after {
             transition: all ease-in-out 250ms;
             content: '';

@@ -23,6 +23,7 @@
                                 width="853" 
                                 height="480" 
                                 frameborder="0" 
+                                loading="lazy"
                                 allowfullscreen="allowfullscreen">
                             </iframe>
                             </div>

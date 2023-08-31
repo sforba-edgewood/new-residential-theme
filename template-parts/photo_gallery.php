@@ -35,7 +35,7 @@
                             ?>
                                 <li>
                                     <a href="<?php echo $lg; ?>" data-lightbox="gallery">
-                                        <img src="<?php echo $xl; ?>"  width="<? echo $lg_width; ?>" height="<? echo $lg_height; ?>" alt="<?php echo $alt; ?>"/>
+                                        <img loading="lazy"  src="<?php echo $xl; ?>"  width="<? echo $lg_width; ?>" height="<? echo $lg_height; ?>" alt="<?php echo $alt; ?>"/>
                                     </a>
                                 </li>
                             <? } ?>
@@ -58,7 +58,7 @@
                             ?>
                                 <li class="gallery__thumb-slide mx-2">
                                     <!-- <? var_dump($thumbnail_sizes);?> -->
-                                    <img class="gallery__thumb-image" src="<?php echo $thumbnail_img; ?>" width="<? echo $thumbnail_width; ?>" height="<? echo $thumbnail_height; ?>" alt="<?php echo $thumbnail_alt; ?>"/>
+                                    <img loading="lazy" class="gallery__thumb-image" src="<?php echo $thumbnail_img; ?>" width="<? echo $thumbnail_width; ?>" height="<? echo $thumbnail_height; ?>" alt="<?php echo $thumbnail_alt; ?>"/>
                                 </li>
                             <? } ?>
                         </ul>

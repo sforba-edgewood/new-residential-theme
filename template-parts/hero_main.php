@@ -9,13 +9,17 @@
     <div class="slick-slider hero-slider">
         <? foreach($slides as $slide) {
             $image = $slide['hero_image'];
+            $image_sizes = $image['sizes'];
+            $hero_image = $image_sizes["2048x2048"];
+            $hero_width = $image_sizes["2048x2048-width"];
+            $hero_height = $image_sizes["2048x2048-height"];
             $primary_title = $slide['primary_title'];
             $secondary_title = $slide['secondary_title'];
             $cta = $slide['hero_cta'];
         ?>
             <div class="slick-slide hero-slide">
                 <div class="hero-slide-wrap">
-                    <img  src="<? echo $image; ?>" target="" alt="<? echo $primary_title; ?>"/>
+                    <img  src="<? echo $hero_image; ?>" width="<? echo $hero_width; ?>" height="<? echo $hero_height; ?>" target="" alt="<? echo $primary_title; ?>"/>
                     <div  class="hero-slide-content">
                         <h1 class="text-5xl md:text-8xl">
                             <? echo $primary_title; ?>

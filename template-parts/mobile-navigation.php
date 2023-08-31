@@ -61,7 +61,7 @@
                         <i class="fa-solid fa-angle-down"></i>
                 </button>
                 <? } ?>
-                <?php if((gettype($subnav_items) == 'array') && count($subnav_items) > 0){?>
+                <?php if((gettype($subnav_items) == 'array') && count($subnav_items) > 0){ ?>
                     <div class="mobile-nav__sub mt-2">
                         <ul class="pl-2">
                             <?php foreach ( $subnav_items  as $subNavItem ) { 
@@ -80,7 +80,7 @@
                             <? }?>
                         </ul>
                     </div>
-                <? }?>
+                <? } ?>
             </li>
             
         <? } ?>

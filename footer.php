@@ -17,7 +17,7 @@
         <div class="footer-col flex flex-col">
             <div class="">
                 <? if(empty($logo) != true){  ?>
-                    <img class="mx-auto w-full footer__logo" src="<? echo $logo; ?>" alt="New Residential Theme"/>
+                    <img loading="lazy" class="mx-auto w-full footer__logo" src="<? echo $logo; ?>" alt="New Residential Theme"/>
                 <? }?>
             </div>
         </div>
@@ -90,7 +90,7 @@
     <div class="pt-12 pb-8 footer__container footer__bottom">
         <div class="">
             <? if(empty($edgewood_logo) != true){  ?>
-                <img class="max-w-[208px] mx-auto mb-4 w-full" src="<? echo $edgewood_logo; ?>" alt="New Residential Theme"/>
+                <img loading="lazy" class="max-w-[208px] mx-auto mb-4 w-full" src="<? echo $edgewood_logo; ?>" alt="New Residential Theme"/>
             <? }?>
         </div>
         <div>

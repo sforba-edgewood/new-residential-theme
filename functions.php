@@ -17,25 +17,25 @@ function init_enqueue() {
 		wp_deregister_script( 'jquery' );
 
 		// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
-		wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1', false );
+		wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1',  array('strategy' => 'defer', 'in_footer' => true) );
 }
 
 function vendor_enqueue() {
     //Font Awesome
-    wp_enqueue_script( 'load-fa', 'https://kit.fontawesome.com/c2421f5429.js' );
+    wp_enqueue_script( 'load-fa', 'https://kit.fontawesome.com/c2421f5429.js',array(), false,  array('strategy' => 'defer')  );
 
 
     // The core GSAP library
-    wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js', array(), false, true );
+    wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js', array(), '1.0',  array('strategy' => 'defer', 'in_footer' => true) );
     // ScrollTrigger - with gsap.js passed as a dependency
-    wp_enqueue_script( 'gsap-st', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js', array('gsap-js'), false, true );
+    wp_enqueue_script( 'gsap-st', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js', array('gsap-js'), false, array('strategy' => 'defer') );
      // Your animation code file - with gsap.js passed as a dependency
 	wp_register_style('slick-css', get_template_directory_uri() .'/vendor/slick-slider/slick.css');
 	wp_register_style('slick-theme-css', get_template_directory_uri() .'/vendor/slick-slider/slick-theme.css');
-    wp_enqueue_script('slick-min-js', get_template_directory_uri().'/vendor/slick-slider/slick.min.js');
+    wp_enqueue_script('slick-min-js', get_template_directory_uri().'/vendor/slick-slider/slick.min.js', array(), false,  array('strategy' => 'defer'));
 
     wp_register_style('lightbox-min-css', get_template_directory_uri() .'/vendor/lightbox/css/lightbox.min.css');
-    wp_enqueue_script('lightbox-min-js', get_template_directory_uri().'/vendor/lightbox/js/lightbox.min.js', array(), '1.0', true);
+    wp_enqueue_script('lightbox-min-js', get_template_directory_uri().'/vendor/lightbox/js/lightbox.min.js', array(), '1.0', array('strategy' => 'defer', 'in_footer' => true));
 
     wp_enqueue_style('slick-css');
 	wp_enqueue_style('slick-theme-css');
@@ -45,7 +45,7 @@ function vendor_enqueue() {
 
 function edgewood_enqueue() {
     wp_enqueue_style('theme-css', get_stylesheet_directory_uri() . "/dist/app.css", null, 'all');
-    wp_enqueue_script('app-js', get_stylesheet_directory_uri() . "/js/app.js", array('gsap-js'), time(), true);
+    wp_enqueue_script('app-js', get_stylesheet_directory_uri() . "/js/app.js", array('gsap-js'), '1.0.0', array('strategy' => 'defer', 'in_footer' => true));
 }
 
 function fonts_enqueue() {
