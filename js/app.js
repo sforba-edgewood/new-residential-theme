@@ -102,37 +102,45 @@ $(document).ready(function() {
 
 
     //Photo Gallery JS
-    let gallery_count = 5;
-    if($('.gallery__thumb-list li').length > 5) {
-        gallery_count = 5;
-    } else if($('.gallery__thumb-list li').length < 2) {
-        gallery_count = 1;
-    } else {
-        gallery_count  = $('.gallery__thumb-list li').length - 1;
-    }
-    console.log(gallery_count);
-    $('.gallery__main-list').slick({
-        dots: false,
-        infinite: true,
-        arrows: true,
-        draggable: true,
-        speed: 500,
-        fade: true,
-        centerMode: true,
-        asNavFor: '.gallery__thumb-list',
-    });
+    const options = {
+        layout: 'sameSize', // See layouts
+    } 
+    const Filterizr = window.Filterizr;
+    // Adjust the CSS selector to match the container where
+    // you set up your image gallery
+    const filterizr = new Filterizr('.gallery__grid-list', options);
 
-    $('.gallery__thumb-list').slick({
-        dots: false,
-        infinite: true,
-        arrows: true,
-        draggable: true,
-        centerMode: true,
-        slidesToShow: gallery_count,
-        speed: 500,
-        fade: false,
-        asNavFor: '.gallery__main-list',
-    });
+    // let gallery_count = 5;
+    // if($('.gallery__thumb-list li').length > 5) {
+    //     gallery_count = 5;
+    // } else if($('.gallery__thumb-list li').length < 2) {
+    //     gallery_count = 1;
+    // } else {
+    //     gallery_count  = $('.gallery__thumb-list li').length - 1;
+    // }
+
+    // $('.gallery__main-list').slick({
+    //     dots: false,
+    //     infinite: true,
+    //     arrows: true,
+    //     draggable: true,
+    //     speed: 500,
+    //     fade: true,
+    //     centerMode: true,
+    //     asNavFor: '.gallery__thumb-list',
+    // });
+
+    // $('.gallery__thumb-list').slick({
+    //     dots: false,
+    //     infinite: true,
+    //     arrows: true,
+    //     draggable: true,
+    //     centerMode: true,
+    //     slidesToShow: gallery_count,
+    //     speed: 500,
+    //     fade: false,
+    //     asNavFor: '.gallery__main-list',
+    // });
 
     function handleAppointmentClick(e) {
         e.preventDefault();
@@ -150,5 +158,5 @@ $(document).ready(function() {
     $('body').on('click', '#apppointmentCloseButton', function(e) {
         handleAppointmentClick(e)
     });
-    
+
 })

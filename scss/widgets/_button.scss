@@ -19,6 +19,10 @@
         background-color: white !important;
         border: 1px solid $color_2!important;
     }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
 }
 
 .sem-cta {

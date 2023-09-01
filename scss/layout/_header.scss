@@ -29,6 +29,35 @@
         }
     }
 
+    .header-contact {
+        display: none;
+
+        @include med-up {
+            color: white;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1rem;
+        }
+
+        &__phone {
+            margin-left: 10px;
+            transition: all ease-in-out 250ms;
+            opacity: 1;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        &__directions {
+            margin-left: 10px;
+            transition: all ease-in-out 250ms;
+            opacity: 1;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
     .veterans {
         width: fit-content;
         display: none;

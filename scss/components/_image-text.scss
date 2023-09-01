@@ -106,13 +106,16 @@
         color: #505050;
         text-transform: uppercase;
         font-family: Oswald,sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &:hover {
             i {
                 opacity: 1;
                 width: auto;
                 visibility:visible;
-                transform: translateX(0px);
+                transform: translateX(5px);
             }
         }
         i {
@@ -121,7 +124,7 @@
             overflow: hidden;
             visibility: hidden;
             transition: all ease-in-out 250ms;
-            transform: translateX(-5px);
+            transform: translateX(-10px);
         }
     }
 }

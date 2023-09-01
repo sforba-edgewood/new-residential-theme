@@ -2,6 +2,8 @@
 
     $veterans = get_field( "veterans_initiative", 'option' );
     $logo = get_field( "logo", 'option' );
+    $directions_link = get_field( "directions_link", 'option' );
+    $contact_phone = get_field( "phone", 'option' );
     $vet_link = $veterans['link'];
     $vet_image = $veterans['image'];
     $navbar_items = wp_get_nav_menu_items('main-menu');
@@ -85,4 +87,18 @@
             
         <? } ?>
     </ul>
+    <div class="mobile-contact pl-4 mt-6">
+        <? if(empty($directions_link['url']) != true){  ?>
+            <a class="font-bold text-3xl mb-3 mobile-contact__directions" href=" <? echo $directions_link['url']; ?>">
+                <i class="fa-solid fa-location-dot"></i>
+                <? echo $directions_link['title']; ?>
+            </a>
+        <? } ?>
+        <? if(empty($contact_phone) != true){  ?>
+            <a class="font-bold text-3xl mobile-contact__phone" href="tel:<? echo $contact_phone; ?>">
+                <i class="fa-solid fa-phone"></i>
+                <? echo $contact_phone; ?>
+            </a>
+        <? } ?>								
+    </div>    
 </div>

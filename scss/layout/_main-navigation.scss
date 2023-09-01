@@ -71,7 +71,9 @@
     transition: all ease-in-out 250ms;
     background-color: $color_1;
     top: calc(100% - 15px);
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
     width: fit-content;
     color:white;
     border-top: $color_2;
