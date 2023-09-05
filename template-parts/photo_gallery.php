@@ -33,13 +33,13 @@
             </div>
         <? } ?>
         <div class="gallery__filter">
-            <ul class="gallery__filter-list">
-                <li data-filter="all"> All items </li>
+            <ul class="gallery__filter-list filter-options">
+                <li class="all-items"> All items </li>
                 <?php foreach ( $filter_list as $filter) { 
                     $label = $filter["label"];
                     $value = $filter["value"];
                 ?>
-                    <li data-filter="<? echo $value; ?>">
+                    <li class="<? echo $value; ?>">
                         <span>
                             <? echo $label; ?>
                         </span>
@@ -49,7 +49,7 @@
         </div>
         <div class="gallery__grid">
             <? if($images_check){ ?>
-                <ul class="gallery__grid-list">
+                <ul class="gallery__grid-list" id="photo-gallery">
                     <?php foreach ( $images as $image ) { 
                         $image_data = $image['image'];
                         $image_tags = $image['image_tags'];
@@ -65,16 +65,18 @@
                         $tag_list = array();
 
                         foreach ( $image_tags as $image_tag ) {
-                            $tag_list[] = $image_tag['value'];
+                            $tag_list[] = '"' .$image_tag['value'] . '"';;
                         }
                         $tag_string = implode(", ",$tag_list);
+                        $tag_array = '['.$tag_string.']';
                         
                     ?>
-                        <li data-sort="value"  data-category="<? echo $tag_string; ?>" class="filtr-item">
+                        <li data-sort="value"  data-groups='<? echo $tag_array; ?>' class="gallery-item">
                             <a href="<?php echo $lg; ?>" data-lightbox="gallery">
                                 <img loading="lazy"  src="<?php echo $xl; ?>"  width="<? echo $lg_width; ?>" height="<? echo $lg_height; ?>" alt="<?php echo $alt; ?>"/>
                             </a>
                         </li>
+                        <div class="ep-spacer"></div>
                     <? } ?>
                 </ul>
             <? } ?>

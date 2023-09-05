@@ -24,7 +24,7 @@ function vendor_enqueue() {
     //Font Awesome
     wp_enqueue_script( 'load-fa', 'https://kit.fontawesome.com/c2421f5429.js',array(), false,  array('strategy' => 'defer')  );
 
-    wp_enqueue_script('filterizr-min-js', get_template_directory_uri().'/vendor/filterizr/filterizr.min.js', array(), false,  array('strategy' => 'defer'));
+    wp_enqueue_script('shuffle-js', get_template_directory_uri().'/vendor/shuffle/shuffle.min.js', array(), false,  array('strategy' => 'defer'));
 
     // The core GSAP library
     wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js', array(), '1.0',  array('strategy' => 'defer', 'in_footer' => true) );

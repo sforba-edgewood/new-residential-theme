@@ -15,7 +15,7 @@ $(document).ready(function() {
             if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
                 if (nowScrollTop > lastScrollTop){
                     // ACTION ON SCROLLING DOWN 
-                    console.log("scroll down ", nowScrollTop );
+                    // console.log("scroll down ", nowScrollTop );
                     if(nowScrollTop > 5) {
                         top_banner.addClass("scroll-hide");
                         contact_banner.addClass("scroll-hide");
@@ -24,7 +24,7 @@ $(document).ready(function() {
                     }
                 } else {
                     // ACTION ON SCROLLING UP 
-                    console.log("scroll up ", nowScrollTop );
+                    // console.log("scroll up ", nowScrollTop );
                     if(nowScrollTop <5) {
                         top_banner.removeClass("scroll-hide");
                         contact_banner.removeClass("scroll-hide");
@@ -102,46 +102,43 @@ $(document).ready(function() {
 
 
     //Photo Gallery JS
-    const options = {
-        layout: 'sameSize', // See layouts
-    } 
-    const Filterizr = window.Filterizr;
-    // Adjust the CSS selector to match the container where
-    // you set up your image gallery
-    const filterizr = new Filterizr('.gallery__grid-list', options);
+    const Shuffle = window.Shuffle;
+    const element = document.getElementById('photo-gallery');
+    const photoGallery = new Shuffle(element, {
+        itemSelector: '.gallery-item',
+        sizer: '.ep-spacer',
+        filterMode: Shuffle.FilterMode.ALL,
+        speed: 750,
+    });
 
-    // let gallery_count = 5;
-    // if($('.gallery__thumb-list li').length > 5) {
-    //     gallery_count = 5;
-    // } else if($('.gallery__thumb-list li').length < 2) {
-    //     gallery_count = 1;
-    // } else {
-    //     gallery_count  = $('.gallery__thumb-list li').length - 1;
-    // }
+    let shuffle_array = [];
+    $('.filter-options li').on('click', function () { 
+        const t = $(this).attr("class");
 
-    // $('.gallery__main-list').slick({
-    //     dots: false,
-    //     infinite: true,
-    //     arrows: true,
-    //     draggable: true,
-    //     speed: 500,
-    //     fade: true,
-    //     centerMode: true,
-    //     asNavFor: '.gallery__thumb-list',
-    // });
+        if($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+        } else {
+            $(this).addClass('selected');
+        }
 
-    // $('.gallery__thumb-list').slick({
-    //     dots: false,
-    //     infinite: true,
-    //     arrows: true,
-    //     draggable: true,
-    //     centerMode: true,
-    //     slidesToShow: gallery_count,
-    //     speed: 500,
-    //     fade: false,
-    //     asNavFor: '.gallery__main-list',
-    // });
+        if(shuffle_array.includes(t)) {
+            return false;
+        }
 
+        if(t == 'all-items') {
+            photoGallery.filter(Shuffle.ALL_ITEMS);   
+            shuffle_array = []; 
+            $('.filter-options li').removeClass('disabled');
+            $('.filter-options li').removeClass('selected');
+        } else {
+            shuffle_array.push(t);
+        }
+
+        photoGallery.filter(shuffle_array);
+
+    });
+
+    //Appointment Modal
     function handleAppointmentClick(e) {
         e.preventDefault();
         e.stopPropagation();

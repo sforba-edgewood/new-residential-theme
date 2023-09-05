@@ -6,3 +6,10 @@
 header, main, footer {
     font-family: Oswald, sans-serif;
 }
+
+.ep-spacer {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 8.33333%;
+  }
