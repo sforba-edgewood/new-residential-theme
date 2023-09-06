@@ -1,0 +1,14 @@
+.review_hero {
+    height: 24.5rem;
+    position: relative;
+
+    &__content {
+        color: white;
+        position: absolute;
+        top: 50%;
+    }
+    &__image {
+        height: 100%;
+        object-fit: cover;
+    }
+}
