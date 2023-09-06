@@ -1,21 +1,44 @@
 .contact-page__form {
- .cpage-field {
-    margin: 0 0 1rem;
+    .cpage-field {
+        margin: 0 0 1rem;
 
-    label {
-        color: white;
-        display: flex;
-        flex-direction: column;
-        color: #fff;
-        text-transform: uppercase;
-        font-family: Oswald,sans-serif;
-        font-size: 1.2rem;
+        label {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: Oswald,sans-serif;
+            font-size: 1.2rem;
 
-        input, textarea, select {
-            width: 100%;
-            border: 1px solid grey;
-            padding-left: 0.4rem;
+            input, textarea, select {
+                width: 100%;
+                border: 1px solid grey;
+                padding-left: 0.4rem;
+            }
         }
-    }
- }   
+
+        &.submit {
+            display: block;
+            margin: 1rem auto -16px auto;
+            border: none;
+            padding: 1rem;
+            font-family: Oswald,sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+            background: #157e5f;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            box-shadow: 0 7px 0 #0c4a37;
+            transition: .3s all linear;
+
+            &:hover {
+                background: #0E553F;
+            }
+        }
+    } 
 }

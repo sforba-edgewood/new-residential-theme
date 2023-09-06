@@ -11,13 +11,18 @@
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-<? echo $card_count; ?> md:gap-y-4 gap-x-4">
         <? foreach($feature_cards as $card) {
             $image = $card['image'];
+            $sizes = $image['sizes'];
+            $lg = $sizes["large"];
+            $lg_height = $sizes["large-height"];
+            $lg_width = $sizes["large-width"];
+
             $title = $card['title'];
             $copy = $card['copy'];
             $features = $card['feature_list'];
         ?> 
             <li class="feature-cards__item">
                 <div class="feature-card">
-                    <img class="w-full feature-card__image" src="<? echo $image; ?>" target="" alt="<? echo $title; ?>"/>
+                    <img loading="lazy"  class="w-full feature-card__image" width="<? echo $lg_width; ?>" height="<? echo $lg_height; ?>" src="<? echo $lg; ?>" target="" alt="<? echo $title; ?>"/>
                     <div class="feature-card__content">
                         <div class="feature-card__title">
                             <h2 class="text-2xl text-center pb-2">

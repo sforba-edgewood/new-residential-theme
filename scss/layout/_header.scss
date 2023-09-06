@@ -1,23 +1,59 @@
 #header {
     position: absolute;
-    z-index: 3  ;
+    z-index: 3;
+    height: auto;
     width: 100%;
-    background-color: rgba(120, 87, 75, 0);
+    background-color: rgba(14, 85, 63, 0);
     transition: all ease-in-out 250ms;
+
+    &.sem-landing-header {
+        background-color: rgba(14, 85, 63, 1);
+    }
 
     &.scroll {
         position: fixed;
-        background-color: rgba(120, 87, 75, 1);
+        background-color: rgba(14, 85, 63, 1);
+        // height: 7rem;
+        top: 0;
     }
 
     .main-logo {
         width: fit-content;
 
         &__image {
-            max-width: 7rem;
+            max-width: 5rem;
 
             @include lg-up {
-                max-width: 13rem;
+                max-width: 7rem;
+            }
+        }
+    }
+
+    .header-contact {
+        display: none;
+
+        @include med-up {
+            color: white;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1rem;
+        }
+
+        &__phone {
+            margin-left: 10px;
+            transition: all ease-in-out 250ms;
+            opacity: 1;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        &__directions {
+            margin-left: 10px;
+            transition: all ease-in-out 250ms;
+            opacity: 1;
+            &:hover {
+                opacity: 0.7;
             }
         }
     }

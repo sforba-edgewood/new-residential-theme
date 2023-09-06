@@ -1,17 +1,19 @@
 .appointment-modal {
-    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     opacity: 0;
+    background-color: rgba(0,0,0, 0);
     transition: all ease-in-out 250ms;
-    z-index: 99;
+    z-index: -1;
     visibility: hidden;
 
     &.active {
-        width: 100%;
-        height: 100%;
+        z-index: 99;
         position: fixed;
         background-color: rgba(0,0,0, 0.4);
-        top: 0;
-        left: 0;
         opacity: 1;
         visibility: visible;
         transition: all ease-in-out 250ms;
@@ -21,7 +23,7 @@
         font-size: 16px;
         font-weight: 300;
         text-align: center;
-        color: white;
+        color: $color_3;
         margin-bottom: 1rem;
 
         @include med-up {
@@ -46,7 +48,7 @@
     &__content {
         position: absolute;
 
-        background: $grullo;
+        background: $color_2;
         height: auto;
         width: 95vw;
         left: 50%;
@@ -66,10 +68,10 @@
 
 button.appointment-modal__button {
     position: fixed;
-    background-color: $grullo;
+    background-color: $color_2;
     right: 0rem;
     bottom: 0rem;
-    color: #FFF;
+    color: $color_3;
     padding: 1.5rem .75rem;
     font-size: 16px;
     letter-spacing: 1px;
@@ -91,8 +93,8 @@ button.appointment-modal__button {
         bottom: 3rem;
     }
     &:hover {
-        color: $grullo;
+        color: $color_3;
         background-color: white;
-        border: 2px solid $grullo;
+        border: 2px solid $color_3;
     }
 }

@@ -18,7 +18,7 @@
     <p>
         <? if(empty($contact_phone) != true){  ?>
             <a href="tel:<? echo $contact_phone; ?>">
-            <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-phone"></i>
                 <? echo $contact_phone; ?>
             </a>
         <? } ?>

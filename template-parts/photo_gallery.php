@@ -3,10 +3,23 @@
     $title = $args['title'];
     $copy = $args['copy'];
     $images = $args['images'];
-    if(gettype($images) != 'array') {
-        return;
+    $images_check = (gettype($images) == 'array') && (count($images) > 0);
+    $filter_list = array();
+    foreach ( $images as $image ) { 
+        $tags = $image['image_tags'];
+        $tags_count = count($tags);
+        
+        if($tags_count > 0) {
+            foreach ( $tags as $tag ) {
+               
+                if(!in_array($tag,  $filter_list)) {
+                    $filter_list[] = $tag;
+                }
+            }
+        }
     }
 ?>
+
 <div class="py-7 gallery">
     <div>
         <? if(empty($title) != true) {  ?>
@@ -19,45 +32,53 @@
                 <? echo $copy; ?>
             </div>
         <? } ?>
-        <div>
-            <div>
-                <div class="gallery__main">
-                    <ul class="gallery__main-list">
-                        <?php foreach ( $images as $image ) { 
-                            $image_data = $image['image']['image_url'];
-                            $sizes = $image_data['sizes'];
-                            $medium = $sizes['medium'];
-                            $lg = $sizes["1536x1536"];
-                            $xl = $sizes["2048x2048"];
-                            $alt = (isset($image_data['alt']) == true ) ? $image_data['alt'] : "Photo Gallery Image";
-                            
-                        ?>
-                            <li>
-                                <a href="<?php echo $lg; ?>" data-lightbox="gallery">
-                                    <img src="<?php echo $xl; ?>"  alt="<?php echo $alt; ?>"/>
-                                </a>
-                            </li>
-                    <? } ?>
-                    </ul>
-                </div>
-                <div class="gallery__thumb">
-                    <ul class="gallery__thumb-list">
-                        <?php foreach ( $images as $image ) { 
-                            $image_data = $image['image']['image_url'];
-                            $sizes = $image_data['sizes'];
-                            $medium = $sizes['medium'];
-                            $lg = $sizes["1536x1536"];
-
-                            $alt = (isset($image_data['alt']) == true ) ? $image_data['alt'] : "Photo Gallery Image";
-                            
-                        ?>
-                            <li class="gallery__thumb-slide mx-2">
-                                <img src="<?php echo $lg; ?>"  alt="<?php echo $alt; ?>"/>
-                            </li>
-                    <? } ?>
-                    </ul>
-                </div>
-            </div>
+        <div class="gallery__filter">
+            <ul class="gallery__filter-list filter-options">
+                <li class="all-items"> All items </li>
+                <?php foreach ( $filter_list as $filter) { 
+                    $label = $filter["label"];
+                    $value = $filter["value"];
+                ?>
+                    <li class="<? echo $value; ?>">
+                        <span>
+                            <? echo $label; ?>
+                        </span>
+                    </li>
+                <? } ?> 
+            </ul>
         </div>
-    </div>
+        <div class="gallery__grid">
+            <? if($images_check){ ?>
+                <ul class="gallery__grid-list" id="photo-gallery">
+                    <?php foreach ( $images as $image ) { 
+                        $image_data = $image['image'];
+                        $image_tags = $image['image_tags'];
+
+                        $sizes = $image_data['sizes'];
+                        $medium = $sizes['medium'];
+                        $lg = $sizes["1536x1536"];
+                        $lg_height = $sizes["1536x1536-height"];
+                        $lg_width = $sizes["1536x1536-width"];
+                        $xl = $sizes["2048x2048"];
+                        $alt = (isset($image_data['alt']) == true ) ? $image_data['alt'] : "Photo Gallery Image";
+
+                        $tag_list = array();
+
+                        foreach ( $image_tags as $image_tag ) {
+                            $tag_list[] = '"' .$image_tag['value'] . '"';;
+                        }
+                        $tag_string = implode(", ",$tag_list);
+                        $tag_array = '['.$tag_string.']';
+                        
+                    ?>
+                        <li data-sort="value"  data-groups='<? echo $tag_array; ?>' class="gallery-item">
+                            <a href="<?php echo $lg; ?>" data-lightbox="gallery">
+                                <img loading="lazy"  src="<?php echo $xl; ?>"  width="<? echo $lg_width; ?>" height="<? echo $lg_height; ?>" alt="<?php echo $alt; ?>"/>
+                            </a>
+                        </li>
+                        <div class="ep-spacer"></div>
+                    <? } ?>
+                </ul>
+            <? } ?>
+        </div>
 </div>

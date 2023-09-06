@@ -3,16 +3,20 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    background: $bay_red;
+    background: $color_1;
     margin-bottom: 0;
     color: #FFF;
     height: 45px;
     font-weight: 900;
     font-family: Oswald,sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     position: relative;
     z-index: 1;
     transition: all ease-in-out 250ms;
+
+    @include med-up {
+        font-size: 1.2rem;
+    }
 
     &.scroll-hide {
         height: 0;

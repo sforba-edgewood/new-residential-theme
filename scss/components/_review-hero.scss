@@ -1,0 +1,61 @@
+.review_hero {
+    height: 28rem;
+    position: relative;
+
+    &__content {
+        width: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        position: absolute;
+        top: 5%;
+    }
+    &__image {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__quote {
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 2.7rem;
+        margin-top: 8.5rem;
+        line-height: 2.8rem;
+        display: flex;
+        padding-bottom: 2rem;
+
+        .quote-mark {
+            font-size: 5rem;
+            color: #f8b805;
+            margin-right: 10px;
+        }
+    }
+
+    &__name {
+        font-size: 2rem;
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    &__stars {
+        color: #f8b805;
+    }
+    &__cta {
+        color: $color_3;
+        font-size: 1rem;
+        display: block;
+        margin-left: auto;
+        width: fit-content;
+        border: 1px solid #fff;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 4px;
+        padding: 6px 1rem;
+        text-shadow: none;
+        transition: background-color 200ms, color 200ms;
+    }
+}

@@ -10,22 +10,26 @@ $(document).ready(function() {
             const top_banner = $(".top-banner");
             const contact_banner = $(".contact-banner");
             const header = $("#header");
+            const sem = $('.sem');
+
             if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
                 if (nowScrollTop > lastScrollTop){
                     // ACTION ON SCROLLING DOWN 
-                    console.log("scroll down ", nowScrollTop );
+                    // console.log("scroll down ", nowScrollTop );
                     if(nowScrollTop > 5) {
                         top_banner.addClass("scroll-hide");
                         contact_banner.addClass("scroll-hide");
                         header.addClass("scroll");
+                        sem?.addClass('scroll');
                     }
                 } else {
                     // ACTION ON SCROLLING UP 
-                    console.log("scroll up ", nowScrollTop );
+                    // console.log("scroll up ", nowScrollTop );
                     if(nowScrollTop <5) {
                         top_banner.removeClass("scroll-hide");
                         contact_banner.removeClass("scroll-hide");
                         header.removeClass("scroll");
+                        sem?.removeClass('scroll');
                     }
 
                }
@@ -35,6 +39,16 @@ $(document).ready(function() {
     });
 
     //HERO MAIN JS
+    $('.sem__hero-slider').slick({
+        // dots: true,
+        infinite: true,
+        arrows: false,
+        draggable: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
+
     $('.hero-slider').slick({
         // dots: true,
         infinite: true,
@@ -44,15 +58,15 @@ $(document).ready(function() {
         fade: true,
         cssEase: 'linear'
     });
-
-    gsap.fromTo(".hero-slide-content h1", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.1);
-    gsap.fromTo(".hero-slide-content h2", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.3);
-    gsap.fromTo(".hero-slide-cta-wrap", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.5);
+    gsap.defaults({ overwrite: true });
+    let h1_tween = gsap.fromTo(".hero-slide-content h1", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.1);
+    let h2_tween =  gsap.fromTo(".hero-slide-content h2", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.3);
+    let content_tween = gsap.fromTo(".hero-slide-cta-wrap", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.5);
 
     $('.hero-slider').on('beforeChange', function(){
-        gsap.fromTo(".hero-slide-content h1", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.1);
-        gsap.fromTo(".hero-slide-content h2", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.3);
-        gsap.fromTo(".hero-slide-cta-wrap", { y: 100, duration: 1, opacity: 0}, { y: -0, duration: 1, opacity: 1}).delay(0.5);
+        h1_tween.play(0);
+        h2_tween.play(0);
+        content_tween.play(0); 
     });
     
     function animateHamburgerMenu() {
@@ -88,32 +102,43 @@ $(document).ready(function() {
 
 
     //Photo Gallery JS
-    const gallery_count  = $('.gallery__thumb-list li').length - 1;
-    
-    console.log(gallery_count);
-    $('.gallery__main-list').slick({
-        dots: false,
-        infinite: true,
-        arrows: true,
-        draggable: true,
-        speed: 500,
-        fade: true,
-        centerMode: true,
-        asNavFor: '.gallery__thumb-list',
+    const Shuffle = window.Shuffle;
+    const element = document.getElementById('photo-gallery');
+    const photoGallery = new Shuffle(element, {
+        itemSelector: '.gallery-item',
+        sizer: '.ep-spacer',
+        filterMode: Shuffle.FilterMode.ALL,
+        speed: 750,
     });
 
-    $('.gallery__thumb-list').slick({
-        dots: false,
-        infinite: true,
-        arrows: true,
-        draggable: true,
-        centerMode: true,
-        slidesToShow: gallery_count,
-        speed: 500,
-        fade: false,
-        asNavFor: '.gallery__main-list',
+    let shuffle_array = [];
+    $('.filter-options li').on('click', function () { 
+        const t = $(this).attr("class");
+
+        if($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+        } else {
+            $(this).addClass('selected');
+        }
+
+        if(shuffle_array.includes(t)) {
+            return false;
+        }
+
+        if(t == 'all-items') {
+            photoGallery.filter(Shuffle.ALL_ITEMS);   
+            shuffle_array = []; 
+            $('.filter-options li').removeClass('disabled');
+            $('.filter-options li').removeClass('selected');
+        } else {
+            shuffle_array.push(t);
+        }
+
+        photoGallery.filter(shuffle_array);
+
     });
 
+    //Appointment Modal
     function handleAppointmentClick(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -130,5 +155,5 @@ $(document).ready(function() {
     $('body').on('click', '#apppointmentCloseButton', function(e) {
         handleAppointmentClick(e)
     });
-    
+
 })

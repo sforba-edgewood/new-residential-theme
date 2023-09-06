@@ -1,7 +1,7 @@
 .mobile-nav {
     display: block;
     height: 100vh;
-    background: $bay_red;
+    background: $color_1;
     width: 80vw;
     position: absolute;
     z-index: 10;
@@ -21,7 +21,7 @@
     .logo {
         &__link {
             display: block;
-            max-width: 11rem;
+            max-width: 5rem;
         }
     }
     &__link {
@@ -48,5 +48,12 @@
 
     &__sub-link {
         color: white;
+    }
+
+    .mobile-contact {
+        color: white;
+        a {
+            display: block;
+        }
     }
 }

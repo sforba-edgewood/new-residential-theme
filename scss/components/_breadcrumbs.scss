@@ -1,10 +1,9 @@
-$color_1: #fff;
-$color_2: rgba(255, 255, 255, 0.7019607843137254);
-$color_3: #333;
 $font-family_1: Oswald,sans-serif;
 
 .bc-bg {
-	background: $grullo;
+	background: $color_5;
+	color: white;
+
 	.breadcrumb-wraps {
 		padding-right: .625rem;
 		padding-left: .625rem;
@@ -20,7 +19,7 @@ $font-family_1: Oswald,sans-serif;
 			width: calc(100% - 1.875rem);
 			margin-right: .9375rem;
 			margin-left: .9375rem;
-			color: $color_1;
+			color: white;
 			font-family: $font-family_1;
 			text-transform: uppercase;
 			letter-spacing: .12rem;
@@ -28,14 +27,17 @@ $font-family_1: Oswald,sans-serif;
 				padding-top: .8rem;
 				margin-bottom: 0;
 				padding-bottom: .8rem;
+				color: white;
+
 				a {
-					color: $color_2;
+					color: white;
 					&:hover {
-						color: $color_3;
+						color: $color_2;
 					}
 				}
 			}
 			.breadcrumb_last {
+				color: white;
 				font-weight: 900;
 			}
 		}

@@ -94,4 +94,37 @@
             }
         }
     }
+
+    &__cta {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem 1rem;
+        font-size: 1.2rem;
+        max-width: 20rem;
+        background: #F4DBB2;
+        color: #505050;
+        text-transform: uppercase;
+        font-family: Oswald,sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            i {
+                opacity: 1;
+                width: auto;
+                visibility:visible;
+                transform: translateX(5px);
+            }
+        }
+        i {
+            opacity: 0;
+            width: 0;
+            overflow: hidden;
+            visibility: hidden;
+            transition: all ease-in-out 250ms;
+            transform: translateX(-10px);
+        }
+    }
 }

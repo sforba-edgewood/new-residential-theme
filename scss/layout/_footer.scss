@@ -1,6 +1,10 @@
 .footer {
-    background: $bay_red;
+    background: $color_1;
     color: white;
+
+    &__logo {
+        max-width: 10rem;
+    }
 
     &__title {
         position: relative;
@@ -12,7 +16,7 @@
             max-width: 6rem;
             bottom: -3px;
             height: 2px;
-            background: $grullo;
+            background: $color_2;
             position: absolute;
         }
     }
@@ -36,7 +40,7 @@
         }
     }
     &__bottom  {
-        background-color: $pine_tree;
+        background-color: $color_3;
 
         img {
             background-color: white;

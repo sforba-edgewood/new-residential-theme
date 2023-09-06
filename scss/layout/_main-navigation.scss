@@ -1,7 +1,7 @@
 .main-navigation {
     justify-content: center;
     display: none;
-
+    
     @include lg-up {
         display: flex;
     }
@@ -9,12 +9,28 @@
         display: flex;
         flex-direction: row;
     }
-    .main-navigation-list-item{
+
+    .main-navigation-list-item {
         position: relative;
+
+        &.sub-nav-present {
+            a.main-navigation-link {
+                i {
+                    color: $color_2;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+        }
         &:hover {
             .main-navigation-link {
-                background-color: $grullo;
+                // background-color: $color_1;
+                &:after {
+                    width: 100%;
+                }
             }
+
             .subnav {
                 max-height: 20vh;
             }
@@ -27,7 +43,19 @@
         white-space: nowrap;
         transition: all ease-in-out 250ms;
         display: block;
+        font-weight: 400;
+        position: relative;
+        font-size: 18px;
 
+        &:after {
+            transition: all ease-in-out 250ms;
+            content: '';
+            display: block;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background-color: $color_2;
+        }
         span {
             position: relative;
         }
@@ -41,12 +69,14 @@
     overflow: hidden;
     position: absolute;
     transition: all ease-in-out 250ms;
-    background-color: $grullo;
-    top: calc(100% - 2px);
-    left: 0;
+    background-color: $color_1;
+    top: calc(100% - 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
     width: fit-content;
     color:white;
-    border-top: white;
+    border-top: $color_2;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -56,7 +86,7 @@
         display: block;
         width: 100%;
         height: 2px;
-        background-color: white;
+        background-color: $color_2;
         position: absolute;
         top:0;
         left: 0;

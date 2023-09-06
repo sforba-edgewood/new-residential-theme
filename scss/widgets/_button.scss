@@ -1,17 +1,40 @@
-.cta {
-    
-}
-
 .main-navigation-link.nav-btn {
-    background-color: $grullo;
-    color: white;
+    background-color: $color_2;
+    color: $color_3 !important;
     border: 1px solid transparent;
     transition: all ease-in-out 250ms;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
+
+    @include xl-up {
+        margin: 0 1rem;
+    }
+
+
+    &:after {
+        display: none !important;
+    }
 
     &:hover {
-        color: $grullo !important;
+        color: $color_3 !important;
         background-color: white !important;
-        border: 1px solid $grullo !important;
+        border: 1px solid $color_2!important;
     }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.sem-cta {
+    background: #F4DBB2;
+    margin: 2rem auto;
+    display: block;
+    text-align: center;
+    letter-spacing: .12rem;
+    text-transform: uppercase;
+    color: #505050;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    width: fit-content;
+    font-weight: bold;
 }

@@ -1,5 +1,5 @@
 <?php 
-    $logo = get_field( "property_logo", 'option' );
+    $logo = get_field( "logo", 'option' );
     $leasing_copy = get_field( "leasing_office_copy", 'option' );
     $phone = get_field( "phone", 'option' );
     $email = get_field( "email", 'option' );
@@ -17,7 +17,7 @@
         <div class="footer-col flex flex-col">
             <div class="">
                 <? if(empty($logo) != true){  ?>
-                    <img class="max-w-xs mx-auto w-full" src="<? echo $logo; ?>" alt="New Residential Theme"/>
+                    <img loading="lazy" class="mx-auto w-full footer__logo" src="<? echo $logo; ?>" alt="New Residential Theme"/>
                 <? }?>
             </div>
         </div>
@@ -55,21 +55,21 @@
                     <ul class="flex flex-row">
                         <? if(empty($facebook) != true){  ?>
                             <li>
-                                <a href="<? echo $facebook;?>" class="footer__social text-4xl">
+                                <a href="<? echo $facebook;?>" class="footer__social text-4xl" target="_blank">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                             </li>
                         <? }?>
                         <? if(empty($twitter) != true){  ?>
                             <li>
-                                <a href="<? echo $twitter;?>" class="footer__social text-4xl mx-3">
+                                <a href="<? echo $twitter;?>" class="footer__social text-4xl mx-3" target="_blank">
                                     <i class="fa-brands fa-twitter"></i>
                                 </a>
                             </li>
                         <? }?>
                         <? if(empty($instagram) != true){  ?>
                         <li>
-                            <a href="<? echo $instagram;?>" class="footer__social text-4xl">
+                            <a href="<? echo $instagram;?>" class="footer__social text-4xl" target="_blank">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
@@ -90,7 +90,7 @@
     <div class="pt-12 pb-8 footer__container footer__bottom">
         <div class="">
             <? if(empty($edgewood_logo) != true){  ?>
-                <img class="max-w-[208px] mx-auto mb-4 w-full" src="<? echo $edgewood_logo; ?>" alt="New Residential Theme"/>
+                <img loading="lazy" class="max-w-[208px] mx-auto mb-4 w-full" src="<? echo $edgewood_logo; ?>" alt="New Residential Theme"/>
             <? }?>
         </div>
         <div>
@@ -102,7 +102,7 @@
         </div>
     </div>
 </footer>
-<? if(empty($appointment_button_text) != true){  ?>
+<? if(empty($appointment_button_text) != true && (basename(get_page_template()) != 'sem_landing.php')){  ?>
     <button class="appointment-modal__button" type="button" id="appointmentModalButton">
         <? echo $appointment_button_text; ?>
     </button>
