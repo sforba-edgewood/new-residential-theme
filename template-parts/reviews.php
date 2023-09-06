@@ -4,7 +4,7 @@
     $reviews = $args['review_list'];
 ?>
 <div class="reviews">
-    <div>
+    <div class="container mx-auto">
         <h2>
             <? echo $title; ?>
         </h2>
@@ -12,24 +12,30 @@
         <? foreach($reviews as $review) { 
 
             $name = $review['reviewer_name'];
-            $copy = $review['reviewer_copy'];
+            $copy = $review['review_copy'];
             $stars = $review['review_stars'];
             $cta =  $review['cta'];
         ?>
             <li>
-                <div>
-                    <h4>
+                <div class="review-card">
+                    <h4 class="review-name">
                         <? echo $name; ?>
                     </h4>
-                    <div>
+                    <div class="review-stars">
                         <?php
                             for ($x = 0; $x < $stars; $x++) {
                                 echo '<i class="fa fa-star"></i>';
                             }
                         ?>
                     </div>
-                    <div>
+                    <div class="review-divider"></div>
+                    <div class="review-text">
                         <? echo $copy; ?>
+                    </div>
+                    <div>
+                        <a href="<? echo $cta["url"]; ?>">
+                            <? echo $cta["title"]; ?>
+                        </a>
                     </div>
                 </div>
             </li>

@@ -10,18 +10,15 @@
 <div class="review_hero">
     <img class="review_hero__image" src="<? echo $lg ?>" />
     <div class="review_hero__content">
-        <div>
-            <span class="review_hero__quote">"</span>
+        <div  class="review_hero__quote">
+            <span class="quote-mark"><i class="fa fa-quote-left"></i></span>
             <? echo $copy; ?>
-            <span  class="review_hero__quote">"</span>
+            <span class="quote-mark"><i class="fa fa-quote-right"></i></span>
         </div>
-        <div>
-            - <? echo $reviewer_name; ?>
-        </div>
-        <div>
-            <a href="<? echo $cta['url']; ?>">
-                <? echo $cta['title']; ?>
-            </a>
+        <div  class="review_hero__name">
+            <div>
+                - <? echo $reviewer_name; ?>
+            </div>
             <div class="review_hero__stars">
                 <?php
                     for ($x = 0; $x < $stars; $x++) {
@@ -29,6 +26,11 @@
                     }
                 ?>
             </div>
+        </div>
+        <div>
+            <a class="review_hero__cta" href="<? echo $cta['url']; ?>">
+                <? echo $cta['title']; ?>
+            </a>
         </div>
     </div>
 </div>
