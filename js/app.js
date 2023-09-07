@@ -119,7 +119,7 @@ $(document).ready(function() {
         let photo_array = [];
         $('.filter-options li').on('click', function () { 
             const t = $(this).attr("id");
-            console.log(t);
+
             if($(this).hasClass('selected')) {
                 $(this).removeClass('selected');
                 
@@ -132,7 +132,7 @@ $(document).ready(function() {
                 photo_array = photo_array.filter(function(item) {
                     return item !== t;
                 });
-                console.log(photo_array);
+
             } else {
                 if(t == 'all-items') {
                     photoGallery.filter(Shuffle.ALL_ITEMS);   
