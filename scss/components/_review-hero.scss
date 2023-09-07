@@ -3,12 +3,19 @@
     position: relative;
 
     &__content {
-        width: 75%;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 80%;
+        left: 5%;
+        transform: translateX(0%);
         color: white;
         position: absolute;
-        top: 5%;
+        top: 20%;
+
+        @include med-up {
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 75%;
+        }
     }
     &__image {
         height: 100%;
@@ -19,27 +26,42 @@
     &__quote {
         font-weight: 100;
         text-transform: uppercase;
-        font-size: 2.7rem;
-        margin-top: 8.5rem;
-        line-height: 2.8rem;
         display: flex;
-        padding-bottom: 2rem;
+        font-size: 1.4rem;
+        margin-top: 4.5rem;
+        line-height: 1.4;
+        padding-bottom: 1rem;
 
+        @include med-up {
+            font-size: 2.7rem;
+            margin-top: 8.5rem;
+            line-height: 2.8rem;
+            padding-bottom: 2rem;
+        }
         .quote-mark {
-            font-size: 5rem;
+
             color: #f8b805;
             margin-right: 10px;
+            font-size: 1rem;
+            @include med-up {
+                font-size: 5rem;
+            }
         }
     }
 
     &__name {
-        font-size: 2rem;
+        font-size: 1rem;
         text-align: right;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
         padding-bottom: 1rem;
+
+        @include med-up {
+            font-size: 2rem;
+        }
+
     }
 
     &__stars {

@@ -1,0 +1,82 @@
+.static_floorplans {
+    padding: 4rem 0;
+
+    &__filter {
+        &-list {
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+            width: fit-content;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            li {
+                color: #FFF;
+                background: $color_1;
+                font-weight: 300;
+                margin-right: 1rem;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-family: 'Oswald',sans-serif;
+                font-size: 1.2rem;
+                padding: 0.5rem 0.5rem;
+                border: 1px solid $color_1;
+                transition: all ease-in-out 250ms;
+
+                &.selected {
+                    color: $color_1;
+                    background: #fff;
+                }
+                &:hover {
+                    color: $color_1;
+                    background: #fff;
+                }
+            }
+        }
+    }
+    &__list {
+        height: auto;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        border: 2px solid #CCC;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+    
+    }
+
+    &__item {
+        width: 30.5%;
+        margin: 1%;
+        
+        figcaption {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .fp-pdf {
+            color: $color_1;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            padding-right: 1rem;
+            text-align: right;
+
+            a {
+                &:after {
+                    font-family: FontAwesome;
+                    content: " \f1c1";
+                    color: #F4DBB2;
+                    margin-left: 0.9rem;
+                    display: inline-block;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
