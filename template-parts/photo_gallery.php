@@ -5,6 +5,7 @@
     $images = $args['images'];
     $images_check = (gettype($images) == 'array') && (count($images) > 0);
     $filter_list = array();
+
     foreach ( $images as $image ) { 
         $tags = $image['image_tags'];
         $tags_count = count($tags);
@@ -34,12 +35,12 @@
         <? } ?>
         <div class="gallery__filter">
             <ul class="gallery__filter-list filter-options">
-                <li class="all-items"> All items </li>
+                <li id="all-items"> All items </li>
                 <?php foreach ( $filter_list as $filter) { 
                     $label = $filter["label"];
                     $value = $filter["value"];
                 ?>
-                    <li class="<? echo $value; ?>">
+                    <li id="<? echo $value; ?>">
                         <span>
                             <? echo $label; ?>
                         </span>

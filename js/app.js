@@ -119,6 +119,7 @@ $(document).ready(function() {
         let photo_array = [];
         $('.filter-options li').on('click', function () { 
             const t = $(this).attr("id");
+            console.log(t);
             if($(this).hasClass('selected')) {
                 $(this).removeClass('selected');
                 
@@ -175,7 +176,7 @@ $(document).ready(function() {
                 floorplan_array = floorplan_array.filter(function(item) {
                     return item !== t;
                 });
-                console.log(floorplan_array);
+    
             } else {
                 if(t == 'all-items') {
                     floorplanGallery.filter(Shuffle.ALL_ITEMS);   
