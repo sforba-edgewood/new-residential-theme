@@ -101,42 +101,96 @@ $(document).ready(function() {
     });
 
 
-    //Photo Gallery JS
+    // //Photo Gallery JS
+    // const Shuffle = window.Shuffle;
     const Shuffle = window.Shuffle;
-    const element = document.getElementById('photo-gallery');
-    const photoGallery = new Shuffle(element, {
-        itemSelector: '.gallery-item',
-        sizer: '.ep-spacer',
-        filterMode: Shuffle.FilterMode.ALL,
-        speed: 750,
-    });
+    const gallery_element = document.getElementById('photo-gallery');
 
-    let shuffle_array = [];
-    $('.filter-options li').on('click', function () { 
-        const t = $(this).attr("class");
 
-        if($(this).hasClass('selected')) {
-            $(this).removeClass('selected');
-        } else {
-            $(this).addClass('selected');
-        }
+    if(gallery_element) {
 
-        if(shuffle_array.includes(t)) {
-            return false;
-        }
+        const photoGallery = new Shuffle(gallery_element, {
+            itemSelector: '.gallery-item',
+            sizer: '.ep-spacer',
+            filterMode: Shuffle.FilterMode.ALL,
+            speed: 750,
+        });
 
-        if(t == 'all-items') {
-            photoGallery.filter(Shuffle.ALL_ITEMS);   
-            shuffle_array = []; 
-            $('.filter-options li').removeClass('disabled');
-            $('.filter-options li').removeClass('selected');
-        } else {
-            shuffle_array.push(t);
-        }
+        let photo_array = [];
+        $('.filter-options li').on('click', function () { 
+            const t = $(this).attr("id");
+            if($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+                
+            } else {
+                $(this).addClass('selected');
+            }
 
-        photoGallery.filter(shuffle_array);
+            if(photo_array.includes(t)) {
+                
+                photo_array = photo_array.filter(function(item) {
+                    return item !== t;
+                });
+                console.log(photo_array);
+            } else {
+                if(t == 'all-items') {
+                    photoGallery.filter(Shuffle.ALL_ITEMS);   
+                    photo_array = []; 
+                    $('.filter-options li').removeClass('disabled');
+                    $('.filter-options li').removeClass('selected');
+                } else {
+                    photo_array.push(t);
+                }
+            }
 
-    });
+
+            photoGallery.filter(photo_array);
+        });
+    }
+    
+
+    //Static Floorplans
+
+    const fp_element = document.getElementById('staticFloorplans');
+    if(fp_element) {
+        const floorplanGallery = new Shuffle(fp_element, {
+            itemSelector: '.static_floorplans__item',
+            sizer: '.ep-spacer',
+            filterMode: Shuffle.FilterMode.ALL,
+            speed: 750,
+        });
+    
+        let floorplan_array = [];
+        $('.filter-options li').on('click', function () { 
+            const t = $(this).attr("id");
+            if($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+                
+            } else {
+                $(this).addClass('selected');
+            }
+
+            if(floorplan_array.includes(t)) {
+                
+                floorplan_array = floorplan_array.filter(function(item) {
+                    return item !== t;
+                });
+                console.log(floorplan_array);
+            } else {
+                if(t == 'all-items') {
+                    floorplanGallery.filter(Shuffle.ALL_ITEMS);   
+                    floorplan_array = []; 
+                    $('.filter-options li').removeClass('disabled');
+                    $('.filter-options li').removeClass('selected');
+                } else {
+                    floorplan_array.push(t);
+                }
+            }
+
+
+            floorplanGallery.filter(floorplan_array);
+        });
+    }
 
     //Appointment Modal
     function handleAppointmentClick(e) {

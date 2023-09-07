@@ -1,6 +1,9 @@
 .reviews {
-	padding: 3rem 0;
+	padding: 3rem 1rem;
 
+	@include med-up {
+		padding: 3rem 0;
+	}
 	h2 {
 		font-size: 1.9rem;
 		padding-bottom: 1rem;
