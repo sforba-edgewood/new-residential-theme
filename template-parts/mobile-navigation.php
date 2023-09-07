@@ -35,7 +35,7 @@
 
 <div class="mobile-nav" id="mobileNav">
     <div class="flex flex-row">
-        <div class="mobile-nav__log mt-8 pl-4">
+        <div class="mobile-nav__log mt-3 pl-4">
             <a href="<? echo $vet_link; ?>" class="logo__link">
                 <img class="logo" src="<? echo $logo; ?>" />
             </a>

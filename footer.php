@@ -87,7 +87,7 @@
             </div>
         </div>
     </div>
-    <div class="pt-12 pb-8 footer__container footer__bottom">
+    <div class="pt-12 pb-20 md:pb-8 footer__container footer__bottom">
         <div class="">
             <? if(empty($edgewood_logo) != true){  ?>
                 <img loading="lazy" class="max-w-[208px] mx-auto mb-4 w-full" src="<? echo $edgewood_logo; ?>" alt="New Residential Theme"/>
