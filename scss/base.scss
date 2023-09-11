@@ -11,5 +11,9 @@ header, main, footer {
     position: absolute;
     opacity: 0;
     visibility: hidden;
-    width: 8.33333%;
+    width: 1.33333%;
+
+    @include med-up {
+        width: 8.33333%;
+    }
   }

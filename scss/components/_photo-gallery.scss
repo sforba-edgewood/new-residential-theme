@@ -1,13 +1,28 @@
 // .gallery {
 .gallery {
     &__grid {
-        padding: 0 4rem;
+        padding: 0rem;
+
+        @include med-up {
+            padding: 0 4rem;
+        }
+
         &-list {
-            max-width: 100%;
-            margin: 0 auto;
+            margin: 0;
+            max-width: 100vw;
+
+            @include med-up {
+                max-width: 100%;
+                margin: 0 auto;
+            }
 
             li {
-                width: 33%;
+                width: 49%;
+
+                @include med-up {
+                    width: 33%;
+                }
+
                 a {
                     img {
                         padding: 1.5%;
@@ -17,13 +32,20 @@
         }
     }
     &__filter {
+        padding: 0 2rem;
+
+        @include med-up {
+            padding: 0;
+        }
+
         &-list {
             display: flex;
-            flex-direction: row;
             margin: 0 auto;
             width: fit-content;
             margin-top: 2rem;
             margin-bottom: 2rem;
+            flex-direction: row;
+            flex-wrap: wrap;
 
             li {
                 color: #FFF;
@@ -37,7 +59,11 @@
                 padding: 0.5rem 0.5rem;
                 border: 1px solid $color_1;
                 transition: all ease-in-out 250ms;
+                margin-bottom: 1rem;
 
+                @include med-up {
+                    margin-bottom: 0
+                }
                 &.selected {
                     color: $color_1;
                     background: #fff;
